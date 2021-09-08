@@ -16,14 +16,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>bin/eclipse</name>
-			<type>2</type>
-			<location>C:/dev/osrmt/output/eclipse</location>
-		</link>
-		<link>
 			<name>eclipse</name>
 			<type>2</type>
-			<location>C:/dev/osrmt/output/eclipse</location>
+			<location>/home/mgad/C::/dev/osrmt/output/eclipse</location>
 		</link>
 	</linkedResources>
 </projectDescription>

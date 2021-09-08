@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                         http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+	    <groupId>com.orsmt.web</groupId>
+	    <artifactId>orsmt-web</artifactId>
+	    <version>1.9</version>
+    </parent>
+
+    <artifactId>war-module</artifactId>
+    <groupId>com.osrmt.www</groupId>
+    <packaging>war</packaging>
+    <name>osrmt war</name>
+    
+     <build>
+     <resources>
+       <resource>
+         <directory>src/main/java/com/osrmt/www</directory>
+       </resource>
+      </resources> 
+    </build>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.osrmt</groupId>
+            <artifactId>ejb-module</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+</project>
