@@ -1,37 +1,82 @@
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                         http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-	    <groupId>com.orsmt.web</groupId>
-	    <artifactId>orsmt-web</artifactId>
-	    <version>1.9</version>
-    </parent>
-
-    <artifactId>ear-module</artifactId>
-    <packaging>ear</packaging>
-    <name>osrmt ear</name>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-ear-plugin</artifactId>
-                <version>2.10.1</version>
-                <configuration>
-                    <ejbModule>
-                        <groupId>com/osrmt</groupId>
-                        <artifactId>ejb-module</artifactId>
-                        <bundleFilename>ejb-module.jar</bundleFilename>
-                    </ejbModule>
-                    <webModule>
-                        <groupId>com/osrmt/www</groupId>
-                        <artifactId>war-module</artifactId>
-                        <contextRoot>src/main/java/com/osrmt/www</contextRoot>
-                    </webModule>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.osrmt</groupId>
+    <artifactId>osrmt</artifactId>
+    <version>1.9-SNAPSHOT</version>
+  </parent>
+  <artifactId>ear-module</artifactId>
+  <packaging>ear</packaging>
+  
+  <properties>
+  	<appclient.target>${basedir}/../appClient-module/target</appclient.target>
+  	<ejb.target>${basedir}/../ejb-module/target</ejb.target>
+  	<war.target>${basedir}/../war-module/target</war.target>
+  	<build.resources>${basedir}/../build-resources</build.resources>
+  </properties>
+  
+  <build>
+  	<plugins>
+  		<plugin>
+		    <artifactId>maven-ear-plugin</artifactId>
+		    <version>2.3.2</version>
+		    <configuration>
+		        <generatedDescriptorLocation>${basedir}/src/main/application/META-INF</generatedDescriptorLocation>
+		        <!--  packagingIncludes>META-INF/**,**/acme-*.jar,**/acme-*.war</packagingIncludes -->
+		        <modules>
+		            <webModule>
+		                <groupId>com.osrmt</groupId>
+		                <artifactId>war-module</artifactId>
+		            </webModule>
+		            <ejbModule>
+		          		<groupId>com.osrmt</groupId>
+		                <artifactId>ejb-module</artifactId>
+		            </ejbModule>
+		            <jarModule>
+		            	<groupId>com.osrmt</groupId>
+		                <artifactId>appClient-module</artifactId>
+		                <includeInApplicationXml>true</includeInApplicationXml>
+		            </jarModule>
+		        </modules>
+		        
+		        <security>
+		            <security-role id="osrmtAdmin">
+		              <role-name>osrmtAdmin</role-name>
+		            </security-role>
+		         </security>
+		    </configuration>
+		</plugin>
+  	</plugins>
+  </build>
+  
+  <dependencies>
+	 <dependency>
+	    <groupId>com.osrmt</groupId>
+	    <artifactId>appClient-module</artifactId>
+	    <version>1.9-SNAPSHOT</version>
+	    <type>jar</type>
+	    <scope>system</scope>
+	    <systemPath>${appclient.target}/appClient-module-1.9-SNAPSHOT.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.osrmt</groupId>
+	    <artifactId>ejb-module</artifactId>
+	    <version>1.9-SNAPSHOT</version>
+	    <type>ejb</type>
+	    <scope>system</scope>
+	    <systemPath>${ejb.target}/ejb-module-1.9-SNAPSHOT.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.osrmt</groupId>
+	    <artifactId>war-module</artifactId>
+	    <version>1.9-SNAPSHOT</version>
+	    <type>war</type>
+	    <scope>system</scope>
+	    <systemPath>${war.target}/war-module-1.9-SNAPSHOT.war</systemPath>
+	</dependency>
+	
+  </dependencies>
+  
 </project>

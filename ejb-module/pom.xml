@@ -1,28 +1,318 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                         http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-	    <groupId>com.orsmt.web</groupId>
-	    <artifactId>orsmt-web</artifactId>
-	    <version>1.9</version>
-    </parent>
-    <artifactId>ejb-module</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
     <groupId>com.osrmt</groupId>
-    <packaging>ejb</packaging>
+    <artifactId>osrmt</artifactId>
+    <version>1.9-SNAPSHOT</version>
+  </parent>
+  <artifactId>ejb-module</artifactId>
+  <packaging>jar</packaging>
+  
+  <properties>
+  	<appclient.target>${basedir}/../appClient-module/target</appclient.target>
+  	<build.resources>${basedir}/../build-resources</build.resources>
+  </properties>
+  
+  <build>
+  	<plugins>
+  	    <plugin>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-jar-plugin</artifactId>
+		    <configuration>
+		        <archive>
+		            <manifest>
+		                <addClasspath>true</addClasspath>
+		            </manifest>
+		        </archive>
+		    </configuration>
+		</plugin>
+  	</plugins>
+  </build>
+  
+  <dependencies>
+  
+    <dependency>
+	    <groupId>com.osrmt</groupId>
+	    <artifactId>appClient-module</artifactId>
+	    <version>1.9-SNAPSHOT</version>
+	    <type>jar</type>
+	    <scope>system</scope>
+	    <systemPath>${appclient.target}/appClient-module-1.9-SNAPSHOT.jar</systemPath>
+	</dependency>
+  
+	 <dependency>
+	    <groupId>net.sourceforge.helpgui</groupId>
+	    <artifactId>helpgui</artifactId>
+	    <version>1.1</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/helpgui-1.1.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.pvv.bcd</groupId>
+	    <artifactId>ijtree</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/ijtree.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>toolbarButtonGraphics</groupId>
+	    <artifactId>jlfgr</artifactId>
+	    <version>1.1</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/jlfgr-1_1.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>resources</groupId>
+	    <artifactId>resources</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/resources.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>sun</groupId>
+	    <artifactId>odbc</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/odbc.jar</systemPath>
+	</dependency>
+	        
+	<dependency>
+	    <groupId>javax</groupId>
+	    <artifactId>javaee</artifactId>
+	    <version>9.0</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/javaee.jar</systemPath>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.oracle.jdbc</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	    <version>12.2.0.1</version>
+	   	<scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/ojdbc8-11.jar</systemPath>
+	</dependency>
+
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jbossall-client</artifactId>
+      <version>4.2.2.GA</version>
+    </dependency>
     
-     <build>
-     <resources>
-       <resource>
-         <directory>../src/main/java</directory>
-         <excludes>
-			<exclude>com/osrmt/www</exclude>
-			<exclude>com/osrmt/www/**</exclude>
-			<exclude>com/osrmt/appclient</exclude>
-			<exclude>com/osrmt/appclient/**</exclude>
-         </excludes>
-       </resource>
-      </resources> 
-    </build>
+	<dependency>
+	    <groupId>com.jgoodies</groupId>
+	    <artifactId>animation</artifactId>
+	    <version>1.4.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.jgoodies</groupId>
+	    <artifactId>forms</artifactId>
+	    <version>1.2.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.jgoodies</groupId>
+	    <artifactId>jgoodies-looks</artifactId>
+	    <version>2.7.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.antlr</groupId>
+	    <artifactId>antlr4-runtime</artifactId>
+	    <version>4.9.2</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-binding</artifactId>
+	    <version>1.0.3</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.lihaoyi</groupId>
+	  <artifactId>castor_2.13</artifactId>
+	  <version>0.1.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>commons-beanutils</groupId>
+	    <artifactId>commons-beanutils</artifactId>
+	    <version>1.6</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-collections</groupId>
+	    <artifactId>commons-collections</artifactId>
+	    <version>3.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>1.2.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-digester</groupId>
+	    <artifactId>commons-digester</artifactId>
+	    <version>1.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-fileupload</groupId>
+	    <artifactId>commons-fileupload</artifactId>
+	    <version>1.4</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-io</groupId>
+	    <artifactId>commons-io</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-lang</groupId>
+	    <artifactId>commons-lang</artifactId>
+	    <version>2.6</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-logging</groupId>
+	    <artifactId>commons-logging</artifactId>
+	    <version>1.1.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-pool</groupId>
+	    <artifactId>commons-pool</artifactId>
+	    <version>1.3</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-validator</groupId>
+	    <artifactId>commons-validator</artifactId>
+	    <version>1.1.4</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.hsqldb</groupId>
+	    <artifactId>hsqldb</artifactId>
+	    <version>2.3.1</version>
+	    <scope>test</scope>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.lowagie</groupId>
+	    <artifactId>itext</artifactId>
+	    <version>1.4</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>com.healthmarketscience.jackcess</groupId>
+	    <artifactId>jackcess</artifactId>
+	    <version>2.1.11</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>jasperreports</groupId>
+	    <artifactId>jasperreports</artifactId>
+	    <version>1.3.1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.jdom</groupId>
+	    <artifactId>jdom</artifactId>
+	    <version>1.1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>jgraph</groupId>
+	    <artifactId>jgraph</artifactId>
+	    <version>5.13.0.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>rhino</groupId>
+	    <artifactId>js</artifactId>
+	    <version>1.7R1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>net.sourceforge.jtds</groupId>
+	    <artifactId>jtds</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>log4j</groupId>
+	    <artifactId>log4j</artifactId>
+	    <version>1.2.8</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>javax.mail</groupId>
+	    <artifactId>mail</artifactId>
+	    <version>1.5.0-b01</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>com.microsoft.sqlserver</groupId>
+	    <artifactId>mssql-jdbc</artifactId>
+	    <version>6.4.0.jre7</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>myfaces</groupId>
+	    <artifactId>myfaces-all</artifactId>
+	    <version>1.1.1</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>mysql</groupId>
+	    <artifactId>mysql-connector-java</artifactId>
+	    <version>5.1.47</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>postgresql</groupId>
+	    <artifactId>postgresql</artifactId>
+	    <version>8.1-407.jdbc3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>struts</groupId>
+	    <artifactId>struts</artifactId>
+	    <version>1.2.9</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>net.sf.ucanaccess</groupId>
+	    <artifactId>ucanaccess</artifactId>
+	    <version>4.0.4</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.bongiorno</groupId>
+	    <artifactId>validation</artifactId>
+	    <version>1.0.3</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>xalan</groupId>
+	    <artifactId>xalan</artifactId>
+	    <version>2.6.0</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>xerces</groupId>
+	    <artifactId>xercesImpl</artifactId>
+	    <version>2.7.1</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>xerces</groupId>
+	    <artifactId>xerces</artifactId>
+	    <version>1.2.3</version>
+	</dependency>
+
+	<dependency>
+	    <groupId>xml-apis</groupId>
+	    <artifactId>xml-apis</artifactId>
+	    <version>1.3.02</version>
+	</dependency>	
+  </dependencies>
+  
 </project>
