@@ -53,28 +53,28 @@
 	 <dependency>
 	    <groupId>com.osrmt</groupId>
 	    <artifactId>appClient-module</artifactId>
-	    <version>1.9-SNAPSHOT</version>
+	    <version>${osrmt.veriosn}</version>
 	    <type>jar</type>
 	    <scope>system</scope>
-	    <systemPath>${appclient.target}/appClient-module-1.9-SNAPSHOT.jar</systemPath>
+	    <systemPath>${appclient.target}/appClient-module-${osrmt.veriosn}.jar</systemPath>
 	</dependency>
 	
 	<dependency>
 	    <groupId>com.osrmt</groupId>
 	    <artifactId>ejb-module</artifactId>
-	    <version>1.9-SNAPSHOT</version>
+	    <version>${osrmt.veriosn}</version>
 	    <type>ejb</type>
 	    <scope>system</scope>
-	    <systemPath>${ejb.target}/ejb-module-1.9-SNAPSHOT.jar</systemPath>
+	    <systemPath>${ejb.target}/ejb-module-${osrmt.veriosn}.jar</systemPath>
 	</dependency>
 	
 	<dependency>
 	    <groupId>com.osrmt</groupId>
 	    <artifactId>war-module</artifactId>
-	    <version>1.9-SNAPSHOT</version>
+	    <version>${osrmt.veriosn}</version>
 	    <type>war</type>
 	    <scope>system</scope>
-	    <systemPath>${war.target}/war-module-1.9-SNAPSHOT.war</systemPath>
+	    <systemPath>${war.target}/war-module-${osrmt.veriosn}.war</systemPath>
 	</dependency>
 	
   </dependencies>
