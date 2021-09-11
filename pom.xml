@@ -29,38 +29,7 @@
 	    <scope>system</scope>
 	    <systemPath>${build.resources}/common/runtime-lib/helpgui-1.1.jar</systemPath>
 	</dependency>
-	
-	<dependency>
-	    <groupId>org.pvv.bcd</groupId>
-	    <artifactId>ijtree</artifactId>
-	    <version>1.0</version>
-	    <scope>system</scope>
-	    <systemPath>${build.resources}/common/runtime-lib/ijtree.jar</systemPath>
-	</dependency>
-	
-	<dependency>
-	    <groupId>toolbarButtonGraphics</groupId>
-	    <artifactId>jlfgr</artifactId>
-	    <version>1.1</version>
-	    <scope>system</scope>
-	    <systemPath>${build.resources}/common/runtime-lib/jlfgr-1_1.jar</systemPath>
-	</dependency>
-	
-	<dependency>
-	    <groupId>resources</groupId>
-	    <artifactId>resources</artifactId>
-	    <version>1.0</version>
-	    <scope>system</scope>
-	    <systemPath>${build.resources}/common/runtime-lib/resources.jar</systemPath>
-	</dependency>
-	
-	<dependency>
-	    <groupId>sun</groupId>
-	    <artifactId>odbc</artifactId>
-	    <version>1.0</version>
-	    <scope>system</scope>
-	    <systemPath>${build.resources}/common/runtime-lib/odbc.jar</systemPath>
-	</dependency>
+
 	        
 	<dependency>
 	    <groupId>javax</groupId>
