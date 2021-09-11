@@ -46,6 +46,12 @@
 	   	<scope>system</scope>
 	    <systemPath>${build.resources}/common/runtime-lib/ojdbc8-11.jar</systemPath>
 	</dependency>
+	
+	<dependency>
+	    <groupId>com.oracle.jdbc</groupId>
+	    <artifactId>ojdbc8</artifactId>
+	    <version>12.2.0.1</version>
+	</dependency>
 
     <dependency>
       <groupId>jboss</groupId>
