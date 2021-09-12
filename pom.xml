@@ -38,19 +38,22 @@
 	    <scope>system</scope>
 	    <systemPath>${build.resources}/common/runtime-lib/javaee.jar</systemPath>
 	</dependency>
-	
+
 	<dependency>
 	    <groupId>com.oracle.jdbc</groupId>
 	    <artifactId>ojdbc8</artifactId>
 	    <version>12.2.0.1</version>
-	   	<scope>system</scope>
+	    <scope>system</scope>
 	    <systemPath>${build.resources}/common/runtime-lib/ojdbc8-11.jar</systemPath>
 	</dependency>
+
 	
 	<dependency>
 	    <groupId>com.oracle.jdbc</groupId>
-	    <artifactId>ojdbc8</artifactId>
-	    <version>12.2.0.1</version>
+	    <artifactId>odbc</artifactId>
+	    <version>1.0</version>
+	    <scope>system</scope>
+	    <systemPath>${build.resources}/common/runtime-lib/odbc.jar</systemPath>
 	</dependency>
 
     <dependency>

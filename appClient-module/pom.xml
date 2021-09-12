@@ -71,6 +71,9 @@
 				        		<fileset dir="${build.resources}/db-init/app-client" />
 				        		<fileset dir="${project.build.directory}/" includes="*.jar" />
 				        	</copy>
+				        	<copy todir="${output.libraries}">
+				        		<fileset dir="${project.build.directory}/" includes="*.jar" />
+				        	</copy>
 		                </tasks>
 		             </configuration>
 		         </execution>
