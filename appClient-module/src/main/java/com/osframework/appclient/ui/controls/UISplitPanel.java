@@ -1,10 +1,9 @@
 package com.osframework.appclient.ui.controls;
 
-import javax.swing.JPanel;
+import java.awt.BorderLayout;
+
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 
 public class UISplitPanel extends JPanel {
 

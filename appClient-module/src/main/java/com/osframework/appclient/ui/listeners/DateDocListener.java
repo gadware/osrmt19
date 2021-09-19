@@ -2,7 +2,8 @@ package com.osframework.appclient.ui.listeners;
 
 import java.util.GregorianCalendar;
 
-import javax.swing.event.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 import com.osframework.appclient.ui.common.GUI;
 import com.osframework.framework.logging.Debug;

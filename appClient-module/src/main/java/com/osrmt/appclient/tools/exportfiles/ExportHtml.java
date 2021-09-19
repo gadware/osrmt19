@@ -1,24 +1,18 @@
 package com.osrmt.appclient.tools.exportfiles;
-import java.io.File;
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import javax.servlet.http.*;
-import org.apache.struts.*;
-import org.apache.struts.action.*;
+import java.util.Enumeration;
 
+import com.osframework.appclient.services.Application;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.framework.utility.FileSystemUtil;
+import com.osframework.modellibrary.reference.common.ReferenceList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.group.ReferenceGroup;
 import com.osrmt.appclient.common.ApplicationObject;
 import com.osrmt.appclient.services.RequirementServices;
-import com.osrmt.appclient.tools.importfiles.ImportDirectory;
-import com.osrmt.modellibrary.reqmanager.*;
 import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 public class ExportHtml {
 

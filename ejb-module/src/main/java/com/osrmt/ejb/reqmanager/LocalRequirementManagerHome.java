@@ -20,10 +20,7 @@
 */
 package com.osrmt.ejb.reqmanager;
 
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.common.*;
+import org.apache.xpath.operations.String;
 public interface LocalRequirementManagerHome extends javax.ejb.EJBLocalHome
 {
 	public static final String COMP_NAME="LocalRequirementManagerName";

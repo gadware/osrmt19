@@ -1,7 +1,6 @@
 package com.osframework.modellibrary.framework;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
 import java.util.Vector;
 
 import com.osframework.modellibrary.common.DbCalendar;

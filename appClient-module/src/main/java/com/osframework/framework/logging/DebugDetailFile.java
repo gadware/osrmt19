@@ -1,6 +1,7 @@
 package com.osframework.framework.logging;
 
-import java.io.*;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
 public class DebugDetailFile {
 	

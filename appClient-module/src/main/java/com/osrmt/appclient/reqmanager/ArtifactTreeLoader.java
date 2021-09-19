@@ -3,8 +3,9 @@
  */
 package com.osrmt.appclient.reqmanager;
 
-import java.util.*;
-import com.osrmt.appclient.services.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
 
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
@@ -13,9 +14,11 @@ import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.TreePath;
 
 import com.osframework.appclient.ui.common.SwingWorker;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.tree.*;
-import com.osrmt.modellibrary.reqmanager.*;
+import com.osframework.appclient.ui.controls.UIJTree;
+import com.osframework.appclient.ui.tree.UITreeModel;
+import com.osframework.appclient.ui.tree.UITreeNode;
+import com.osrmt.appclient.services.RequirementServices;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 /**
  * TreeLoader dynamically loads the tree

@@ -1,38 +1,42 @@
 package com.osrmt.appclient.common;
 
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.lang.ref.*;
-import javax.swing.*;
+import java.util.Enumeration;
 
-import java.util.*;
-import java.text.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
-import com.jgoodies.forms.builder.*;
+import com.jgoodies.forms.builder.ButtonStackBuilder;
 import com.jgoodies.forms.factories.Borders;
-import com.jgoodies.forms.factories.ButtonBarFactory;
-import com.jgoodies.forms.layout.*;
-
+import com.jgoodies.forms.layout.CellConstraints;
+import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.appclient.ui.common.ISApplicationMediator;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
+import com.osframework.appclient.ui.common.ISEvent;
+import com.osframework.appclient.ui.common.UIContext;
+import com.osframework.appclient.ui.components.IApplyChanges;
+import com.osframework.appclient.ui.components.UIPanelListButton;
+import com.osframework.appclient.ui.controls.ICustomBind;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIValueList;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.SystemMessageFramework;
 import com.osrmt.appclient.services.RequirementServices;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.appclient.ui.common.*;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.ComponentTypeGroup;
+import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 public class ArtifactListPanel extends UIPanelListButton implements ICustomBind, IApplyChanges{
 

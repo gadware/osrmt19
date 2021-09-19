@@ -1,14 +1,18 @@
 package com.osframework.appclient.ui.common;
 
 import java.awt.Image;
-import java.net.URL;
 import java.util.Enumeration;
 
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JMenuItem;
+import javax.swing.KeyStroke;
 
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIMenu;
+import com.osframework.appclient.ui.controls.UIMenuBar;
+import com.osframework.appclient.ui.controls.UIMenuItem;
 import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 public class MenuManager {
 	

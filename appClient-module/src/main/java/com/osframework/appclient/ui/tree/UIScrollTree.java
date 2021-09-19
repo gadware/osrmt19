@@ -1,18 +1,16 @@
 package com.osframework.appclient.ui.tree;
 
-import java.awt.Component;
-import java.util.*;
+import java.util.Vector;
 
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.tree.*;
+import javax.swing.JScrollPane;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
+import javax.swing.tree.TreePath;
 
-import com.osframework.appclient.ui.common.*;
+import com.osframework.appclient.ui.common.IParent;
 import com.osframework.appclient.ui.controls.UIJTree;
 import com.osframework.appclient.ui.controls.UIProperties;
-import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.ReferenceDisplay;
 
 public class UIScrollTree extends JScrollPane {
 

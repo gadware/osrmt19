@@ -1,33 +1,23 @@
 package com.osframework.appclient.services;
 
 import java.rmi.RemoteException;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Map;
 
-import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperFillManager;
-import net.sf.jasperreports.engine.JasperPrint;
-import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
-
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.ejb.reportwriter.IReportWriter;
+import com.osframework.ejb.reportwriter.ReportWriterUtil;
 import com.osframework.framework.logging.Debug;
-import com.osframework.datalibrary.common.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.ejb.reportwriter.*;
-import com.osframework.modellibrary.common.ServiceCall;
-import com.osframework.modellibrary.reference.common.ReferenceModel;
-import com.osframework.modellibrary.reference.group.FileTypeFramework;
-import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.modellibrary.reference.group.ReferenceGroup;
-import com.osframework.modellibrary.reference.group.TableNameFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.ejb.system.*;
-import com.osframework.modellibrary.reportwriter.*;
+import com.osframework.modellibrary.reportwriter.ReportList;
+import com.osframework.modellibrary.reportwriter.ReportModel;
+import com.osframework.modellibrary.system.RecordParameterControlList;
+import com.osrmt.modellibrary.issue.IssueList;
 import com.osrmt.modellibrary.issue.IssueModel;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.modellibrary.issue.*;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
+
+import net.sf.jasperreports.engine.JasperPrint;
 
 public class ReportWriterServices extends BaseService {
 

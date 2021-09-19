@@ -1,13 +1,10 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.datalibrary.reference.common;
 
+import com.osframework.datalibrary.common.DataAccessException;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 import com.osframework.modellibrary.reference.common.ReferenceGroupList;
-import com.osframework.datalibrary.common.*;
-import com.osframework.ejb.reference.common.IReferenceMap;
-import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.modellibrary.reference.common.*;
 
 public class ReferenceGroupDataAdapter extends ReferenceGroupDbAdapter{ 
 	

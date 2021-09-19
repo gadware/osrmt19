@@ -1,21 +1,28 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Component;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.MouseListener;
 import java.beans.PropertyChangeListener;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import javax.swing.*;
-import javax.swing.border.*;
-import javax.swing.event.*;
-import javax.swing.table.*;
+import javax.swing.FocusManager;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.ListSelectionModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableCellEditor;
+import javax.swing.table.TableColumnModel;
 
 import com.jgoodies.forms.factories.Borders;
-import com.osframework.appclient.services.SecurityServices;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.DoubleClickListener;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.common.TableSorter;
+import com.osframework.modellibrary.common.ResultList;
 
 /**
  * The MultiColumnList provides consisten functionality to a 

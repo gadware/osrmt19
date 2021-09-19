@@ -1,37 +1,31 @@
 package com.osrmt.appclient.system;
 import java.awt.BorderLayout;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.UIStandardDialog;
-import com.osframework.appclient.ui.controls.IGetDocument;
-import com.osframework.appclient.ui.controls.UIComboBox;
-import com.osframework.appclient.ui.controls.UIProperties;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import javax.servlet.http.*;
+
 import javax.swing.FocusManager;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import org.apache.struts.*;
-import org.apache.struts.action.*;
-
-import com.osrmt.appclient.services.RequirementServices;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.ControlPanel;
+import com.osframework.appclient.ui.common.FormControl;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.components.UIStandardDialog;
+import com.osframework.appclient.ui.controls.IGetDocument;
+import com.osframework.appclient.ui.controls.UIComboBox;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormTitleFramework;
+import com.osframework.modellibrary.reference.group.ModelColumnFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationCustomControlModel;
 import com.osrmt.modellibrary.reference.group.ApplicationGroup;
-import com.osrmt.modellibrary.reference.group.RelationGroup;
-import com.osrmt.modellibrary.reqmanager.*;
 
 public class CustomControlForm extends UIStandardDialog {
 

@@ -1,17 +1,11 @@
 package com.osframework.appclient.ui.controls;
 
 import java.awt.Dialog;
-import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.HeadlessException;
-import java.awt.event.WindowEvent;
 
-import javax.swing.*;
+import javax.swing.JDialog;
 
-import com.jgoodies.looks.LookUtils;
-import com.jgoodies.looks.Options;
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.listeners.WindowClosingListener;
 import com.osframework.framework.logging.Debug;
 
 public class UIJDialog extends JDialog {

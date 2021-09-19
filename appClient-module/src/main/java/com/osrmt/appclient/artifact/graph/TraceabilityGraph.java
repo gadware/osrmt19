@@ -20,47 +20,19 @@ package com.osrmt.appclient.artifact.graph;
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  *  
  */
-
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-
-import java.util.*;
-import java.text.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.appclient.services.*;
-import com.osrmt.modellibrary.reqmanager.*;
-
-import java.awt.Color;
-import java.awt.geom.Rectangle2D;
+import java.awt.BorderLayout;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Vector;
 
-import javax.swing.BorderFactory;
 import javax.swing.JFrame;
-import javax.swing.JScrollPane;
 
-import org.jgraph.JGraph;
-import org.jgraph.graph.DefaultEdge;
-import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.DefaultGraphModel;
-import org.jgraph.graph.GraphConstants;
 import org.jgraph.graph.GraphModel;
+
+import com.osrmt.appclient.services.RequirementServices;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 public class TraceabilityGraph {
 	

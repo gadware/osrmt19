@@ -1,13 +1,17 @@
 package com.osrmt.appclient.changecontrol;
 import java.awt.BorderLayout;
-import java.awt.Cursor;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
+import java.util.Enumeration;
+
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.TreePath;
+
+import com.osframework.appclient.services.Application;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
 import com.osframework.appclient.ui.common.ApplicationAction;
 import com.osframework.appclient.ui.common.ApplicationActionList;
 import com.osframework.appclient.ui.components.MultiColumnList;
@@ -15,35 +19,25 @@ import com.osframework.appclient.ui.components.UIPanelStatusBar;
 import com.osframework.appclient.ui.controls.UIJPanel;
 import com.osframework.appclient.ui.controls.UIMenuBar;
 import com.osframework.appclient.ui.controls.UIToolBar;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.tree.*;
+import com.osframework.appclient.ui.listeners.DoubleClickListener;
+import com.osframework.appclient.ui.tree.UIScrollTree;
 import com.osframework.appclient.ui.tree.UITreeModel;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import javax.servlet.http.*;
-import javax.swing.JPanel;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
-import javax.swing.tree.TreePath;
-
-import org.apache.struts.*;
-import org.apache.struts.action.*;
-
+import com.osframework.appclient.ui.tree.UITreeNode;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.modellibrary.common.ResultColumnException;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityModel;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
 import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.appclient.reqmanager.RequirementManagerTools;
-import com.osrmt.appclient.services.IssueServices;
-import com.osrmt.appclient.services.RequirementServices;
-import com.osrmt.modellibrary.issue.IssueCriteria;
 import com.osrmt.modellibrary.issue.IssueList;
 import com.osrmt.modellibrary.reference.group.ActionGroup;
 import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 import com.osrmt.modellibrary.reference.group.FormTitleGroup;
-import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
 import com.osrmt.modellibrary.reference.group.SystemMessageGroup;
-import com.osrmt.modellibrary.reqmanager.*;
 
 public class ChangeControlViewController {
 

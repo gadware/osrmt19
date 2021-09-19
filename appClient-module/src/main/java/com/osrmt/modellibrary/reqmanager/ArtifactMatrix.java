@@ -1,13 +1,10 @@
 package com.osrmt.modellibrary.reqmanager;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
 import java.util.Vector;
 
-import com.osframework.datalibrary.common.DataAccessException;
-import com.osframework.datalibrary.common.Db;
-import com.osframework.framework.logging.Debug;
 import com.osframework.modellibrary.common.ResultList;
-import com.osrmt.modellibrary.reference.group.RelationGroup;
 
 public class ArtifactMatrix extends ResultList {
 	

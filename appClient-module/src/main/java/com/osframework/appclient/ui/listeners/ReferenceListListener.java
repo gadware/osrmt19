@@ -1,11 +1,14 @@
 package com.osframework.appclient.ui.listeners;
 
-import java.awt.event.*;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
-import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.JComboBox;
+import javax.swing.JList;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
 
 /**
  * ReferenceListListener is used to return the selected reference id from the

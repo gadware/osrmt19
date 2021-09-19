@@ -18,15 +18,17 @@
 
 */
 package com.osframework.modellibrary.reference.security;
-import java.util.*;
-import com.osframework.framework.locale.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.framework.exceptions.*;
-import com.osframework.ejb.reference.common.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
+
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.security.ISecurity;
+import com.osframework.framework.exceptions.ExceptionInfo;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.BaseModel;
+import com.osframework.modellibrary.common.Comparison;
+import com.osframework.modellibrary.common.ResultColumnList;
 
 /**
 null

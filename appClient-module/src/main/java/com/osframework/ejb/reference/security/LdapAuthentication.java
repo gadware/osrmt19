@@ -3,11 +3,15 @@ import java.util.Hashtable;
 
 import javax.naming.Context;
 import javax.naming.NamingException;
-import javax.naming.directory.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
+import javax.naming.directory.DirContext;
+import javax.naming.directory.InitialDirContext;
+
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.ApplicationSettingFramework;
+import com.osframework.modellibrary.reference.security.ApplicationSettingList;
+import com.osframework.modellibrary.reference.security.InvalidUserLoginException;
 
 public class LdapAuthentication {
 	

@@ -20,8 +20,10 @@
 */
 package com.osframework.appclient.ui.common;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Component;
+
+import javax.swing.SwingUtilities;
+
 import com.osframework.framework.logging.Debug;
 
 /**

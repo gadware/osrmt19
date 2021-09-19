@@ -1,10 +1,8 @@
 package com.osframework.appclient.ui.editor;
 
 import java.awt.Component;
-import java.awt.Font;
-import java.awt.Image;
-import javax.swing.*;
-import javax.swing.table.*;
+
+import javax.swing.JTable;
 
 public class TableLineModel implements IDocumentLine {
 

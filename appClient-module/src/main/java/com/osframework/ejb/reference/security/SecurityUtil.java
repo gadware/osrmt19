@@ -20,7 +20,6 @@
 */
 package com.osframework.ejb.reference.security;
 import javax.naming.NoInitialContextException;
-import com.osframework.modellibrary.common.*;
 
 public class SecurityUtil
 {

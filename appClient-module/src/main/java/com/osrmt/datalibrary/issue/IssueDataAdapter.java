@@ -19,16 +19,15 @@
 
 */package com.osrmt.datalibrary.issue;
 
-import java.sql.*;
-import java.util.*;
-
-import com.osrmt.modellibrary.issue.*;
-import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.common.ServiceCall;
+import com.osrmt.modellibrary.issue.IssueCriteria;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
 
 /**
 null

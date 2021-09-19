@@ -3,16 +3,20 @@
  */
 package com.osrmt.modellibrary.reports;
 
-import java.util.*;
 import java.io.Serializable;
+import java.util.Collection;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Vector;
+
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.framework.logging.*;
-
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.modellibrary.issue.*;
+import com.osframework.modellibrary.common.IControlModel;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.issue.IssueModel;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 /**
  *
  */

@@ -1,12 +1,16 @@
 package com.osrmt.modellibrary.reqmanager;
 
-import java.util.*;
 import java.io.Serializable;
-import com.osrmt.modellibrary.reference.group.*;
+import java.util.Enumeration;
+import java.util.Vector;
+
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.modellibrary.common.IControlModel;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osrmt.modellibrary.reference.group.DatabaseDataTypeGroup;
+import com.osrmt.modellibrary.reference.group.ModelColumnGroup;
+import com.osrmt.modellibrary.reference.group.TraceTreeGroup;
 
 public class TraceTreeCriteria implements Serializable, IControlModel {
 

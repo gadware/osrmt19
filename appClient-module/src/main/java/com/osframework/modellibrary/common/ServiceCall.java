@@ -1,6 +1,6 @@
 package com.osframework.modellibrary.common;
 
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 
 public class ServiceCall implements java.io.Serializable {
 	

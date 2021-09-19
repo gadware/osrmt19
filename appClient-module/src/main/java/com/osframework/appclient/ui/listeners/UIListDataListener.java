@@ -1,6 +1,7 @@
 package com.osframework.appclient.ui.listeners;
 
-import javax.swing.event.*;
+import javax.swing.event.ListDataEvent;
+import javax.swing.event.ListDataListener;
 
 public abstract class UIListDataListener implements ListDataListener {
 

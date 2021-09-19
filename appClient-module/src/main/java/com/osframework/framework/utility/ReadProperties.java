@@ -23,8 +23,8 @@
  *    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA 
  */
 package com.osframework.framework.utility;
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
 /**
  * This class is for reading properties files, results are returned in HashMap
  * @author Jacek Kowalczyk kowalczykj@tt.com.pl

@@ -20,15 +20,13 @@
 */
 package com.osframework.ejb.reportwriter;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.modellibrary.reportwriter.*;
+import java.util.Map;
+
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reportwriter.ReportList;
+import com.osframework.modellibrary.reportwriter.ReportModel;
 
 public interface IReportWriter
 {

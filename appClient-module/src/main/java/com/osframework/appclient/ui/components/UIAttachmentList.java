@@ -3,12 +3,17 @@ package com.osframework.appclient.ui.components;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.FileDialog;
-import java.awt.event.*;
-import java.io.*;
-import java.lang.ref.WeakReference;
-import java.util.Random;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 
-import javax.swing.*;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JMenuItem;
+import javax.swing.JPopupMenu;
+import javax.swing.SwingUtilities;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
@@ -18,14 +23,17 @@ import com.osframework.appclient.ui.common.IParent;
 import com.osframework.appclient.ui.controls.ICustomBind;
 import com.osframework.appclient.ui.listeners.DoubleClickListener;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.*;
-import com.osframework.modellibrary.system.*;
+import com.osframework.framework.utility.FileProcess;
+import com.osframework.framework.utility.FileSystemUtil;
+import com.osframework.framework.utility.TimedAction;
 import com.osframework.modellibrary.reference.group.FileTypeFramework;
 import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
 import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.modellibrary.reference.group.ReferenceGroup;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.system.RecordFileList;
+import com.osframework.modellibrary.system.RecordFileModel;
 
 public class UIAttachmentList extends MultiColumnList implements ICustomBind, IParent{
 	

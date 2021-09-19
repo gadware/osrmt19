@@ -1,14 +1,10 @@
 package com.osframework.appclient.ui.controls;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.LayoutManager;
 
-import javax.swing.* ;
+import javax.swing.JPanel;
 
-import com.jgoodies.forms.factories.Borders;
-import com.jgoodies.looks.LookUtils;
-import com.jgoodies.looks.Options;                                                                                                                                                       
 import com.osframework.appclient.ui.common.GUI;
 
 public class UIJPanel extends JPanel {

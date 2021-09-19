@@ -1,9 +1,9 @@
 package com.osframework.appclient.services;
 
-import com.osframework.framework.logging.*;
+import com.osframework.framework.logging.Debug;
 import com.osframework.framework.utility.ClientProperty;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 
 /**
  * Global access to client side settings

@@ -1,9 +1,16 @@
 package com.osrmt.appclient.setup;
 
-import java.util.*;
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.util.Vector;
 
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.Access;
+import com.osframework.datalibrary.common.AccessDataTypeException;
+import com.osframework.datalibrary.common.ConnectionList;
+import com.osframework.datalibrary.common.ConnectionProperty;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.SQLResult;
 
 public class CodeGenMigration {
 	

@@ -6,10 +6,8 @@ package com.osframework.appclient.ui.editor;
 import java.awt.Component;
 import java.awt.Insets;
 
-import javax.swing.DefaultCellEditor;
 import javax.swing.JEditorPane;
 import javax.swing.JTable;
-import javax.swing.JTextField;
 
 /**
  *

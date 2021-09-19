@@ -19,11 +19,6 @@
 
 */package com.osframework.datalibrary.system;
 
-import java.sql.*;
-import java.util.*;
-
-import com.osframework.modellibrary.system.*;
-import com.osframework.datalibrary.common.*;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 

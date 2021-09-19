@@ -1,6 +1,7 @@
 package com.osframework.appclient.ui.listeners;
 
-import javax.swing.event.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 import com.osframework.appclient.ui.common.GUI;
 

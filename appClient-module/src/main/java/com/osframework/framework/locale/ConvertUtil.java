@@ -1,7 +1,5 @@
 package com.osframework.framework.locale;
 
-import java.io.*;
-
 public class ConvertUtil {
 
 	

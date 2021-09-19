@@ -1,32 +1,30 @@
 package com.osrmt.appclient.reqmanager;
 
-import javax.swing.event.*;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreePath;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
-import java.awt.event.*;
-import java.awt.*;
-import java.util.*;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.framework.logging.*;
-import com.osframework.appclient.ui.tree.*;
-import com.osframework.framework.utility.TimedAction;
 import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.appclient.services.SecurityServices;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
+import com.osframework.appclient.ui.common.ControlPanel;
+import com.osframework.appclient.ui.common.ISApplicationMediator;
+import com.osframework.appclient.ui.components.FormPref;
+import com.osframework.appclient.ui.components.UIStandardDialog;
 import com.osframework.appclient.ui.controls.UIProperties;
-import com.osframework.modellibrary.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.common.ReferenceList;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
-import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
+import com.osrmt.modellibrary.reference.group.FormButtonTextGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 
 /**

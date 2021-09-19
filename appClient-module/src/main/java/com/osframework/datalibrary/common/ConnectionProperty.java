@@ -1,10 +1,6 @@
 package com.osframework.datalibrary.common;
 
-import java.sql.*;
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.beans.*;
+import java.io.Serializable;
 
 
 public class ConnectionProperty implements Serializable  {

@@ -3,10 +3,9 @@
  */
 package com.osframework.appclient.ui.editor;
 
-import java.awt.Image;
-import java.util.*;
-import javax.swing.table.*;
-import javax.swing.*;
+import java.util.List;
+
+import javax.swing.table.AbstractTableModel;
 
 /**
  *

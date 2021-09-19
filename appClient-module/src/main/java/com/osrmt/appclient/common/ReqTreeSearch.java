@@ -1,28 +1,21 @@
 package com.osrmt.appclient.common;
 
-import java.awt.*;
-import com.osframework.appclient.ui.controls.UIJDialog;
-import java.util.*;
-import java.awt.event.*;
-
-import javax.swing.*;
-import javax.swing.tree.*;
 import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.tree.*;
-import com.osframework.modellibrary.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osrmt.appclient.common.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.appclient.ui.controls.*;
+import java.awt.Dialog;
+import java.awt.Frame;
+import java.awt.HeadlessException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
+
+import com.osframework.appclient.ui.components.PanelOkCancel;
+import com.osframework.appclient.ui.controls.UIJDialog;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.tree.UIScrollTree;
+import com.osframework.appclient.ui.tree.UITreeModel;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 public class ReqTreeSearch extends UIJDialog {
 	

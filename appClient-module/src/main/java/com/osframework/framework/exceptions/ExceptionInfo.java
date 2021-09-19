@@ -1,5 +1,5 @@
 package com.osframework.framework.exceptions;
-import com.osframework.framework.messages.*;
+import com.osframework.framework.messages.Lang;
 
 public class ExceptionInfo {
 	

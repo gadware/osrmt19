@@ -3,9 +3,9 @@ package com.osrmt.appclient.artifact.graph;
 import java.util.Enumeration;
 import java.util.Vector;
 
+import org.jgraph.JGraph;
 import org.jgraph.graph.DefaultGraphCell;
 import org.jgraph.graph.GraphModel;
-import org.jgraph.JGraph;
 
 
 public class UIGraph extends JGraph {

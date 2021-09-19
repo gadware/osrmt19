@@ -26,15 +26,16 @@
 */
 package com.osframework.modellibrary.reference.security;
 
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.ejb.reference.common.*;
-import com.osframework.framework.logging.*;
+import java.util.Collections;
+import java.util.Enumeration;
+import java.util.Vector;
+
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.security.ISecurity;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.ResultColumnException;
+import com.osframework.modellibrary.common.ResultColumnList;
+import com.osframework.modellibrary.common.ResultList;
 
 /**
  * The ApplicationSetting model is a domain object which stores a users custom saved settings/preferences

@@ -1,7 +1,9 @@
 package com.osframework.appclient.ui.common;
 
 import java.awt.Component;
-import com.osframework.modellibrary.reference.security.*;
+
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationCustomControlModel;
 
 public class FormControl implements IHtmlApplicationControl {
 	

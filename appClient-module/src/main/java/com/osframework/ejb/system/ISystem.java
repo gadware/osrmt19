@@ -20,14 +20,13 @@
 */
 package com.osframework.ejb.system;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.system.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.system.RecordFileList;
+import com.osframework.modellibrary.system.RecordFileModel;
+import com.osframework.modellibrary.system.RecordParameterList;
+import com.osframework.modellibrary.system.RecordParameterModel;
 
 public interface ISystem
 {

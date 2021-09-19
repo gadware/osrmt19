@@ -1,9 +1,14 @@
 package com.osframework.framework.logging;
 
-import java.util.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.Vector;
+
 import com.osframework.framework.utility.CalendarUtility;
-import com.osframework.framework.utility.FileProcess;
 
 public class DebugFile {
 	

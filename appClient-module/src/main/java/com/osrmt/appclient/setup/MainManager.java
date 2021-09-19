@@ -1,7 +1,5 @@
 package com.osrmt.appclient.setup;
 
-import java.io.*;
-
 public abstract class MainManager extends ConsoleManager {
 
 	private final static int stateMain = 0;

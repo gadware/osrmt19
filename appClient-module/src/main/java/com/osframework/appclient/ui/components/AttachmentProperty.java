@@ -1,16 +1,17 @@
 package com.osframework.appclient.ui.components;
 
 import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JPanel;
 import javax.swing.JDialog;
-import javax.swing.JTabbedPane;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.appclient.ui.common.*;
+import com.osframework.appclient.ui.common.IParent;
+import com.osframework.appclient.ui.common.LayoutUtility;
 import com.osframework.appclient.ui.controls.UIEditorPane;
 import com.osframework.appclient.ui.controls.UIProperties;
 import com.osframework.appclient.ui.controls.UITextField;
@@ -19,11 +20,7 @@ import com.osframework.framework.logging.Debug;
 import com.osframework.framework.utility.FileProcess;
 import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
 import com.osframework.modellibrary.reference.group.FormTitleFramework;
-import com.osframework.modellibrary.reference.security.ApplicationControlList;
-import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 import com.osframework.modellibrary.system.RecordFileModel;
-
-import javax.swing.*;
 
 public class AttachmentProperty extends JDialog {
 

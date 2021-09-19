@@ -18,6 +18,9 @@
 
 package com.osrmt.www.common;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts.action.Action;
@@ -25,14 +28,8 @@ import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
 import com.osframework.modellibrary.common.ServiceCall;
-import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 import com.osrmt.appclient.common.ApplicationObject;
 import com.osrmt.www.NotLoggedInException;
-import com.osrmt.www.common.Constants;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import com.osrmt.www.common.*;
 import com.osrmt.www.services.LocalReferenceServices;
 
 /**

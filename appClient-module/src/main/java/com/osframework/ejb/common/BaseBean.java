@@ -1,15 +1,12 @@
 package com.osframework.ejb.common;
 
 import java.rmi.RemoteException;
-import java.sql.ResultSet;
-import java.util.Vector;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.framework.logging.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.ejb.reference.security.SecurityUtil;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.security.AuthorizeException;
 
 public class BaseBean {
 

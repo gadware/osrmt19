@@ -1,8 +1,11 @@
 package com.osframework.framework.messages;
 
-import com.osframework.framework.logging.*;
-import java.util.*;
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.util.Enumeration;
+import java.util.Properties;
+
+import com.osframework.framework.logging.Debug;
 
 /*
  * The Lang (language) file is used to translate strings into the 

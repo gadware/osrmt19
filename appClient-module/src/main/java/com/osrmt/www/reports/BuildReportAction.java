@@ -16,69 +16,45 @@
  */
 package com.osrmt.www.reports;
 
-import com.osrmt.www.utilty.WebFileUtil;
-import com.osframework.appclient.services.ReportWriterServices;
-import com.osframework.appclient.services.SystemServices;
-import com.osframework.appclient.ui.components.MultiColumnList;
-import com.osframework.ejb.reportwriter.*;
-import com.osframework.framework.utility.FileProcess;
-import com.osframework.modellibrary.reference.group.TableNameFramework;
-import com.osframework.modellibrary.reportwriter.ReportList;
-import com.osframework.modellibrary.reportwriter.ReportModel;
-import com.osframework.modellibrary.system.RecordFileModel;
-import com.osframework.modellibrary.system.RecordParameterControlList;
-import com.osframework.modellibrary.system.RecordParameterModel;
-import com.osrmt.www.services.LocalReportWriterServices;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletOutputStream;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Random;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.beanutils.PropertyUtils;
+import org.apache.struts.action.ActionForm;
+import org.apache.struts.action.ActionForward;
+import org.apache.struts.action.ActionMapping;
+import org.apache.struts.action.ActionMessages;
+
+import com.osframework.appclient.services.ReportWriterServices;
+import com.osframework.ejb.reportwriter.NullReportException;
+import com.osframework.ejb.reportwriter.ReportWriterBean;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.FileProcess;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reportwriter.ReportList;
+import com.osframework.modellibrary.reportwriter.ReportModel;
+import com.osframework.modellibrary.system.RecordParameterControlList;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
+import com.osrmt.www.NotLoggedInException;
+import com.osrmt.www.common.BaseAction;
+import com.osrmt.www.common.WebUser;
+import com.osrmt.www.services.LocalReportWriterServices;
+import com.osrmt.www.services.LocalSecurityServices;
+import com.osrmt.www.utilty.WebFileUtil;
+
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRParameter;
 import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.util.JRLoader;
-
-import org.apache.commons.beanutils.PropertyUtils;
-import org.apache.struts.action.Action;
-import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
-import org.apache.struts.action.ActionForward;
-
-import com.osframework.modellibrary.common.ResultList;
-import com.osframework.modellibrary.reference.group.ApplicationFramework;
-
-import com.osrmt.appclient.services.RequirementServices;
-
-import com.osrmt.modellibrary.reference.group.ApplicationGroup;
-import com.osrmt.modellibrary.reference.group.TraceTypeGroup;
-import com.osframework.appclient.services.SecurityServices;
-import com.osframework.modellibrary.common.ServiceCall;
-import com.osframework.modellibrary.reference.security.ApplicationUserModel;
-import com.osframework.modellibrary.reference.security.InvalidUserLoginException;
-import com.osframework.modellibrary.reference.security.InvalidUserPasswordException;
-import com.osframework.modellibrary.reference.security.ApplicationControlList;
-import com.osframework.framework.logging.*;
-import com.osframework.appclient.ui.tree.*;
-import com.osrmt.www.NotLoggedInException;
-import com.osrmt.www.common.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.www.services.*;
-import java.util.*;
-import org.apache.struts.action.ActionMessages;
-import org.apache.struts.validator.DynaValidatorForm;
-import org.jboss.deployment.JARDeployerMBean;
-
-import javax.swing.*;
 /**
  *
  * @author Leszek Zborowski

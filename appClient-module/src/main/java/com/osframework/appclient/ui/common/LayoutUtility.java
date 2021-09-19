@@ -1,17 +1,13 @@
 package com.osframework.appclient.ui.common;
 
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.ScrollPane;
+import javax.swing.JScrollPane;
 
-import javax.swing.*;
-import javax.swing.text.JTextComponent;
-
+import com.jgoodies.forms.builder.DefaultFormBuilder;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.RowSpec;
 import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.reference.security.*;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-import java.util.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 public class LayoutUtility {
 

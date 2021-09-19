@@ -1,8 +1,9 @@
 package com.osframework.appclient.ui.listeners;
 
-import java.awt.event.*;
-
-import javax.swing.KeyStroke;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class KeyEnterListener implements KeyListener {
 	

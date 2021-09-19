@@ -25,35 +25,21 @@ package com.osrmt.www.artifact;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionErrors;
 import org.apache.struts.action.ActionForm;
-import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionForward;
-
-import com.osrmt.www.common.BaseAction;
-import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
-import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.appclient.services.SystemServices;
-import com.osframework.framework.utility.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.modellibrary.reference.group.FileTypeFramework;
-import org.apache.commons.beanutils.PropertyUtils;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.FileSystemUtil;
+import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
-import org.apache.struts.action.DynaActionForm;
-import org.apache.struts.action.SessionActionMapping;
-import com.osrmt.modellibrary.reqmanager.ArtifactModel;
-import java.util.Enumeration;
-import com.osrmt.www.common.*;
-import com.osrmt.www.services.*;
-import com.osframework.modellibrary.common.ServiceCall;
-import org.apache.struts.upload.FormFile;
-import org.apache.struts.validator.DynaValidatorForm;
+
+import com.osframework.appclient.services.SystemServices;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.TableNameFramework;
 import com.osframework.modellibrary.system.RecordFileList;
-import com.osframework.modellibrary.reference.group.*; 
+import com.osframework.modellibrary.system.RecordFileModel;
 import com.osrmt.www.NotLoggedInException;
+import com.osrmt.www.common.BaseAction;
+import com.osrmt.www.common.WebUser;
+import com.osrmt.www.services.LocalArtifactServices;
 
 
 /**

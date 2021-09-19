@@ -1,11 +1,16 @@
 package com.osframework.datalibrary.common;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.math.BigDecimal;
-import java.sql.*;
-import java.util.*;
-import com.osframework.framework.logging.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.GregorianCalendar;
+import java.util.Random;
+import java.util.Vector;
+
+import com.osframework.framework.logging.Debug;
 
 /**
  * Db provides access to the database and some general helper methods.

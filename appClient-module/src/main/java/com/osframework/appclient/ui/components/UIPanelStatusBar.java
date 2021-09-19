@@ -1,6 +1,7 @@
 package com.osframework.appclient.ui.components;
 
 import java.awt.event.ActionEvent;
+
 import javax.swing.JPanel;
 import javax.swing.Timer;
 

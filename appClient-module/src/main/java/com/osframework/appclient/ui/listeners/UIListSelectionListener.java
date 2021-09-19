@@ -1,7 +1,6 @@
 package com.osframework.appclient.ui.listeners;
 
 import java.awt.Cursor;
-import java.awt.event.ActionEvent;
 
 import javax.swing.JFrame;
 import javax.swing.event.ListSelectionEvent;

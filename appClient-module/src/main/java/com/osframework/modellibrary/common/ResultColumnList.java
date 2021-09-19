@@ -1,9 +1,8 @@
 package com.osframework.modellibrary.common;
 
-import java.util.*;
-import java.io.*;
-
-import com.osframework.framework.logging.Debug;
+import java.io.Serializable;
+import java.util.Enumeration;
+import java.util.Vector;
 /**
  * The result column list is used to manage a result models
  * list of columns for the abstract data model.

@@ -1,16 +1,14 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.datalibrary.reference.security;
 
-import java.sql.*;
-import java.util.*;
+import java.util.Vector;
 
+import com.osframework.datalibrary.common.DataAccessException;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.framework.logging.*;
-import com.osframework.datalibrary.common.*;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
 import com.osframework.modellibrary.reference.group.ViewFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationSettingList;
 
 public class ApplicationSettingDataAdapter extends ApplicationSettingDbAdapter{ 
 

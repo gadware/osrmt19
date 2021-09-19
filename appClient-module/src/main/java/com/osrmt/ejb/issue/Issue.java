@@ -20,15 +20,13 @@
 */
 package com.osrmt.ejb.issue;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.issue.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osrmt.modellibrary.issue.IssueCriteria;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.issue.IssueModel;
+import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
 
 public interface Issue extends javax.ejb.EJBObject, IIssue
 {

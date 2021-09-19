@@ -7,7 +7,6 @@ import com.osframework.framework.logging.Debug;
 import com.osframework.framework.utility.CalendarUtility;
 import com.osframework.modellibrary.common.DatabaseDataType;
 import com.osframework.modellibrary.common.IControlModel;
-import com.osframework.modellibrary.reference.group.DatabaseDataTypeFramework;
 
 
 public class ApplicationSettingModel extends ApplicationSettingDataModel implements Comparable {

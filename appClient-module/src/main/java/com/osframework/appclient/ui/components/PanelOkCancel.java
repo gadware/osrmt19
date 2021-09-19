@@ -1,12 +1,12 @@
 package com.osframework.appclient.ui.components;
-import javax.swing.*;
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+
 import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.factories.ButtonBarFactory;
-import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.appclient.ui.controls.UIJPanel;

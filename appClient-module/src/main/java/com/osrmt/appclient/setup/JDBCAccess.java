@@ -1,10 +1,21 @@
 package com.osrmt.appclient.setup;
 
-import java.sql.*;
-import java.util.*;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.Timestamp;
+import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import com.osframework.framework.logging.*;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.AccessDataTypeException;
+import com.osframework.datalibrary.common.ConnectionProperty;
+import com.osframework.datalibrary.common.SQLResult;
+import com.osframework.framework.logging.Debug;
 
 public class JDBCAccess {
 	

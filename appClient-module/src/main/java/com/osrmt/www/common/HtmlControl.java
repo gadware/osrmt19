@@ -1,25 +1,18 @@
 package com.osrmt.www.common;
 
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.common.*;
-import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import java.util.Vector;
 
-import javax.servlet.http.*;
-import javax.swing.*;
-import javax.swing.text.Document;
-
-import org.apache.struts.*;
-import org.apache.struts.action.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.IHtmlApplicationControl;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.modellibrary.common.DatabaseDataType;
+import com.osframework.modellibrary.common.IControlModel;
+import com.osframework.modellibrary.common.ResultList;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 
 public class HtmlControl {
     

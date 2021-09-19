@@ -1,12 +1,12 @@
 package com.osframework.framework.logging;
 
-import java.util.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.*;
-import com.osframework.modellibrary.framework.*;
-import com.osframework.framework.utility.*;
-import com.osframework.framework.locale.*;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.Hashtable;
 /*
  * The debug class is the main utility framework class
  * for debugging and exception handling.

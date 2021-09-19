@@ -1,11 +1,11 @@
 package com.osframework.appclient.ui.controls;
 
-import javax.swing.*;
-
-import com.osframework.framework.logging.Debug;
-
 import java.util.Enumeration;
 import java.util.Vector;
+
+import javax.swing.JMenuBar;
+
+import com.osframework.framework.logging.Debug;
 
 public class UIMenuBar extends JMenuBar {
 	

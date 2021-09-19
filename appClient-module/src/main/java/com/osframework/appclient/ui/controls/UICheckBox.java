@@ -1,18 +1,7 @@
 package com.osframework.appclient.ui.controls;
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import javax.servlet.http.*;
 import javax.swing.Action;
 import javax.swing.Icon;
 import javax.swing.JCheckBox;
-import javax.swing.JRadioButton;
 
 public class UICheckBox extends JCheckBox implements IGetBoolean {
 

@@ -20,7 +20,6 @@
 */
 package com.osframework.ejb.reportwriter;
 import javax.naming.NoInitialContextException;
-import com.osframework.modellibrary.common.*;
 
 public class ReportWriterUtil
 {

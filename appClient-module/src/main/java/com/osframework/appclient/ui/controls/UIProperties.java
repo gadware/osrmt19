@@ -1,11 +1,12 @@
 package com.osframework.appclient.ui.controls;
 
-import java.awt.*;
+import java.awt.Dimension;
+import java.awt.Point;
 
 import javax.swing.UIManager;
+
 import com.jgoodies.looks.LookUtils;
 import com.jgoodies.looks.Options;
-import com.jgoodies.looks.plastic.PlasticXPLookAndFeel;
 import com.osframework.appclient.ui.common.GUI;
 import com.osframework.framework.logging.Debug;
 

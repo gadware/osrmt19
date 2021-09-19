@@ -1,10 +1,14 @@
 package com.osrmt.appclient.system;
 
-import java.awt.*;
-import javax.swing.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.controls.UIProperties;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JWindow;
+
+import com.osframework.appclient.ui.common.GUI;
 
 public class UISplash extends JWindow {
 	

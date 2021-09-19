@@ -3,21 +3,27 @@
  */
 package com.osrmt.appclient.common;
 
-import java.util.*;
+import java.util.Enumeration;
+
 import javax.swing.JPanel;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
-import com.osframework.appclient.ui.editor.*;
 import com.osframework.appclient.ui.common.IReceiveMessage;
 import com.osframework.appclient.ui.common.ISApplicationMediator;
 import com.osframework.appclient.ui.common.ISEvent;
 import com.osframework.appclient.ui.common.UIContext;
-import com.osframework.framework.logging.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.appclient.services.*;
+import com.osframework.appclient.ui.controls.ICustomBind;
+import com.osframework.appclient.ui.editor.DocumentTextLineModel;
+import com.osframework.appclient.ui.editor.IDocumentLine;
+import com.osframework.appclient.ui.editor.ImageLineModel;
+import com.osframework.appclient.ui.editor.UIDocumentTable;
+import com.osframework.appclient.ui.editor.UIDocumentTableModel;
+import com.osframework.framework.logging.Debug;
+import com.osrmt.appclient.services.RequirementServices;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentList;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentModel;
 /**
  * 
  *

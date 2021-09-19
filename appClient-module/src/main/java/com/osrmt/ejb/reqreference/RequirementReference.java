@@ -20,15 +20,9 @@
 */
 package com.osrmt.ejb.reqreference;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.common.ReferenceGroupList;
 
 public interface RequirementReference extends javax.ejb.EJBObject, IRequirementReference
 {

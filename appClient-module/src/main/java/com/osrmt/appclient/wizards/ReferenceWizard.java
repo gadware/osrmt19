@@ -1,35 +1,53 @@
 package com.osrmt.appclient.wizards;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.print.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.HeadlessException;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
-import javax.print.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.event.ListSelectionEvent;
 
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperPrint;
-
-import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.ControlPanel;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.common.IReceiveMessage;
+import com.osframework.appclient.ui.common.ISApplicationMediator;
+import com.osframework.appclient.ui.common.ISEvent;
+import com.osframework.appclient.ui.common.UIContext;
+import com.osframework.appclient.ui.components.MultiColumnList;
+import com.osframework.appclient.ui.components.UIPanelButton;
+import com.osframework.appclient.ui.components.UIPanelListButton;
+import com.osframework.appclient.ui.components.UIStandardDialog;
+import com.osframework.appclient.ui.components.UIStandardPanel;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.controls.UIValueList;
+import com.osframework.appclient.ui.listeners.DoubleClickListener;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.appclient.ui.listeners.UIListSelectionListener;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reportwriter.*;
-import com.osframework.modellibrary.system.*;
+import com.osframework.framework.utility.TimedAction;
+import com.osframework.modellibrary.common.ResultColumnException;
+import com.osframework.modellibrary.reference.common.ReferenceGroupList;
+import com.osframework.modellibrary.reference.common.ReferenceGroupModel;
+import com.osframework.modellibrary.reference.common.ReferenceList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.FormTitleFramework;
+import com.osframework.modellibrary.reference.group.ReferenceModificationFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 import com.osrmt.appclient.services.ReqReferenceServices;
-import com.osrmt.appclient.system.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.appclient.ui.common.*;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
+import com.osrmt.modellibrary.reference.group.FormTitleGroup;
 
 
 public class ReferenceWizard {

@@ -1,25 +1,22 @@
 package com.osrmt.appclient.reqmanager;
 
-import java.awt.event.*;
-import java.net.URL;
 import java.util.Enumeration;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.JToolBar;
-import javax.swing.KeyStroke;
-
 import com.osframework.appclient.services.SecurityServices;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.framework.logging.Debug;
+import com.osframework.appclient.ui.common.ApplicationAction;
+import com.osframework.appclient.ui.common.ApplicationActionList;
+import com.osframework.appclient.ui.common.Keys;
+import com.osframework.appclient.ui.common.MenuManager;
+import com.osframework.appclient.ui.controls.UIMenuBar;
+import com.osframework.appclient.ui.controls.UIToolBar;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.modellibrary.reference.group.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityModel;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
+import com.osrmt.modellibrary.reference.group.ActionGroup;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 
 public class RequirementManagerTools {
 	

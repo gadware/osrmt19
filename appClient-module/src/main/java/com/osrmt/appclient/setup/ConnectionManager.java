@@ -1,16 +1,14 @@
 package com.osrmt.appclient.setup;
 
-import java.io.*;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.Vector;
-
-import javax.swing.JOptionPane;
+import java.io.File;
+import java.io.PrintWriter;
 
 import com.osframework.appclient.services.SystemServices;
-import com.osframework.datalibrary.common.*;
-import com.osframework.framework.utility.FileSystemUtil;
-import com.osframework.framework.utility.SerializeUtility;
+import com.osframework.datalibrary.common.Access;
+import com.osframework.datalibrary.common.ConnectionList;
+import com.osframework.datalibrary.common.ConnectionProperty;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
 
 public class ConnectionManager extends ConsoleManager {
 

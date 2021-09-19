@@ -19,11 +19,6 @@
 
 */package com.osrmt.datalibrary.reqmanager;
 
-import java.sql.*;
-import java.util.*;
-
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.datalibrary.common.*;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 

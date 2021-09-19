@@ -1,10 +1,6 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osrmt.modellibrary.reqmanager;
 
-import java.util.Enumeration;
-import com.osrmt.modellibrary.reqmanager.*;
-
-
 /**
 null
 */

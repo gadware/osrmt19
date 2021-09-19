@@ -1,28 +1,27 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import javax.swing.*;
-
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
 
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
+import javax.swing.JScrollPane;
+import javax.swing.ListSelectionModel;
+
+import com.jgoodies.forms.builder.DefaultFormBuilder;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.ui.common.LayoutUtility;
 import com.osframework.appclient.ui.controls.UIJDialog;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIProperties;
 import com.osframework.appclient.ui.listeners.DoubleClickListener;
 import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
 
 
 /* comments */

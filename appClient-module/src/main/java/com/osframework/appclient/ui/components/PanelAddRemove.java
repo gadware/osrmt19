@@ -1,20 +1,23 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.factories.*;
-import com.jgoodies.forms.layout.*;
-import com.jgoodies.looks.LookUtils;
-import com.jgoodies.looks.Options;
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.event.ListSelectionListener;
+
+import com.jgoodies.forms.builder.ButtonStackBuilder;
+import com.jgoodies.forms.builder.PanelBuilder;
+import com.jgoodies.forms.factories.Borders;
+import com.jgoodies.forms.factories.ButtonBarFactory;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
 import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.controls.UIJPanel;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.logging.DebugConfig;
 import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
 

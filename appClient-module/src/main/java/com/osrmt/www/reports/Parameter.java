@@ -17,12 +17,12 @@
 
 package com.osrmt.www.reports;
 
+import java.util.ArrayList;
+
 import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.framework.logging.Debug;
 import com.osframework.modellibrary.reference.common.ReferenceList;
 import com.osframework.modellibrary.reference.common.ReferenceModel;
-import java.util.ArrayList;
-import org.apache.struts.util.LabelValueBean;
 
 /**
  *

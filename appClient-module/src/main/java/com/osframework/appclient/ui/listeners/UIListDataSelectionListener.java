@@ -1,10 +1,10 @@
 package com.osframework.appclient.ui.listeners;
 
 import java.awt.Cursor;
-import java.awt.event.ActionEvent;
 
 import javax.swing.JFrame;
-import javax.swing.event.*;
+import javax.swing.event.ListDataEvent;
+import javax.swing.event.ListDataListener;
 
 import com.osframework.framework.logging.Debug;
 

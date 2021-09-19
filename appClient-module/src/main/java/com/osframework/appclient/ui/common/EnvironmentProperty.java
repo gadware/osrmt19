@@ -1,10 +1,13 @@
 package com.osframework.appclient.ui.common;
 
-import java.sql.*;
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.beans.*;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.Serializable;
+import java.util.Enumeration;
 
 import com.osframework.datalibrary.common.ConnectionList;
 import com.osframework.framework.logging.Debug;

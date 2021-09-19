@@ -20,29 +20,35 @@
 */
 package com.osrmt.appclient.system;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import java.text.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.appclient.common.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.group.ApplicationFramework;
-import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.services.*;
+import javax.swing.JFrame;
+import javax.swing.event.ChangeEvent;
+
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.components.UIUserField;
+import com.osframework.appclient.ui.controls.UIComboBox;
+import com.osframework.appclient.ui.controls.UIComboDocument;
+import com.osframework.appclient.ui.controls.UIDateField;
+import com.osframework.appclient.ui.controls.UIDoubleField;
+import com.osframework.appclient.ui.controls.UIEditorPane;
+import com.osframework.appclient.ui.controls.UIIndicatorField;
+import com.osframework.appclient.ui.controls.UIIntegerField;
+import com.osframework.appclient.ui.controls.UITextField;
+import com.osframework.appclient.ui.listeners.DoubleDocListener;
+import com.osframework.appclient.ui.listeners.IndicatorListener;
+import com.osframework.appclient.ui.listeners.NumberDocListener;
+import com.osframework.appclient.ui.listeners.ReferenceListListener;
+import com.osframework.appclient.ui.listeners.TextDocListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.CalendarUtility;
+import com.osframework.framework.utility.RuleScript;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osrmt.modellibrary.reference.group.ReferenceGroup;
 
 
 /**

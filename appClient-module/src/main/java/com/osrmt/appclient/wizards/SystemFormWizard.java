@@ -1,38 +1,29 @@
 package com.osrmt.appclient.wizards;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.print.*;
-import java.util.*;
-import javax.print.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.view.JasperViewer;
-
-import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.ui.components.PanelButtonWizard;
+import com.osframework.appclient.ui.components.UICenterSouthDialog;
+import com.osframework.appclient.ui.components.UIList;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.listeners.DoubleClickListener;
+import com.osframework.appclient.ui.listeners.KeyEnterListener;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.appclient.ui.listeners.UIListSelectionListener;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.FileProcess;
-import com.osframework.framework.utility.FileSystemUtil;
-import com.osframework.framework.utility.PrintUtility;
 import com.osframework.modellibrary.reference.common.ReferenceDisplay;
 import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
 import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
-import com.osframework.modellibrary.reference.security.ApplicationControlList;
-import com.osframework.modellibrary.reference.security.ApplicationControlModel;
-import com.osframework.modellibrary.system.*;
-import com.osframework.modellibrary.reportwriter.*;
 import com.osrmt.appclient.system.UISystemForm;
-import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 import com.osrmt.modellibrary.reference.group.ReferenceGroup;
-import com.osrmt.modellibrary.reference.group.TableNameGroup;
 
 public class SystemFormWizard {
 	

@@ -1,11 +1,13 @@
 package com.osrmt.appclient.artifact.form;
 
-import java.util.*;
+import java.util.Enumeration;
 
 import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.reference.security.*;
 import com.osframework.modellibrary.common.IControlModel;
-import com.osframework.modellibrary.reference.group.*;
+import com.osframework.modellibrary.reference.group.ApplicationSettingFramework;
+import com.osframework.modellibrary.reference.group.ModelColumnFramework;
+import com.osframework.modellibrary.reference.security.ApplicationSettingList;
+import com.osframework.modellibrary.reference.security.ApplicationSettingModel;
 
 public class SystemOptionModel extends ApplicationSettingList implements IControlModel {
 

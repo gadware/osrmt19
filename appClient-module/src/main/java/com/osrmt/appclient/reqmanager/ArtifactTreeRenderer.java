@@ -1,13 +1,16 @@
 package com.osrmt.appclient.reqmanager;
 
-import java.awt.*;
-import java.awt.image.*;
+import java.awt.Component;
 import java.util.Hashtable;
 
-import javax.swing.*;
-import javax.swing.tree.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.appclient.ui.common.*;
+import javax.swing.Icon;
+import javax.swing.JLabel;
+import javax.swing.JTree;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
+
+import com.osframework.appclient.ui.common.GUI;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 public class ArtifactTreeRenderer extends DefaultTreeCellRenderer {
 

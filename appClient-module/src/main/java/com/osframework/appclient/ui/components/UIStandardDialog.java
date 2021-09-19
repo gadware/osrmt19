@@ -1,14 +1,19 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Dialog;
+import java.awt.Frame;
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIJDialog;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
 import com.osframework.appclient.ui.listeners.UIActionListener;
 
 /**

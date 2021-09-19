@@ -1,39 +1,32 @@
 package com.osframework.appclient.system;
 
-import java.awt.*;
-import javax.swing.*;
 import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import java.awt.FlowLayout;
+import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Calendar;
 import java.util.Enumeration;
 
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-
-import javax.swing.JLabel;
-import javax.swing.JTextField;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
 
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.UIJFrame;
-import com.osframework.modellibrary.common.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.ui.components.MultiColumnList;
+import com.osframework.appclient.ui.components.PanelOkCancel;
+import com.osframework.appclient.ui.components.UICenterSouthDialog;
+import com.osframework.appclient.ui.controls.UIEditorPane;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.controls.UISplitPanel;
+import com.osframework.appclient.ui.listeners.UIListSelectionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.logging.DebugService;
 import com.osframework.modellibrary.framework.SysLogList;
 import com.osframework.modellibrary.framework.SysLogModel;
 import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
 import com.osframework.modellibrary.reference.group.FormTitleFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.framework.logging.*;
-
-
-import com.osframework.appclient.ui.components.UICenterSouthDialog;
-import com.osframework.appclient.ui.listeners.UIListSelectionListener;
 
 public class SystemLogForm extends UICenterSouthDialog {
 

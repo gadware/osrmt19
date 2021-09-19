@@ -28,13 +28,11 @@ import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 import org.apache.struts.action.ActionMessages;
 
-import com.osframework.appclient.services.SecurityServices;
+import com.osframework.framework.logging.Debug;
 import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 import com.osframework.modellibrary.reference.security.InvalidUserLoginException;
 import com.osframework.modellibrary.reference.security.InvalidUserPasswordException;
-import com.osframework.framework.logging.*;
-import com.osrmt.www.common.BaseAction;
-import com.osrmt.www.services.*;
+import com.osrmt.www.services.LocalSecurityServices;
 
 /**
  * <p>Validate a user logon.</p>

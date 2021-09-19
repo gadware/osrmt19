@@ -1,12 +1,15 @@
 package com.osframework.appclient.ui.controls;
 
-import javax.swing.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.util.Enumeration;
+import java.util.Vector;
 
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
+import com.osframework.appclient.ui.common.IParentMenu;
 import com.osframework.framework.logging.Debug;
-
-import java.awt.event.*;
-import java.util.*;
-import com.osframework.appclient.ui.common.*;
 
 public class UIMenu extends JMenu implements IParentMenu {
 

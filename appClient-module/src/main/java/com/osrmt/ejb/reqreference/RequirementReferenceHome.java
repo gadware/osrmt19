@@ -20,14 +20,6 @@
 */
 package com.osrmt.ejb.reqreference;
 
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.ui.tree.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reference.group.*;
-
 public interface RequirementReferenceHome extends javax.ejb.EJBHome
 {
 	public static final String COMP_NAME="RequirementReferenceName";

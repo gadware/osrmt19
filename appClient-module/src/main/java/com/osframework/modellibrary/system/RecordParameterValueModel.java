@@ -20,9 +20,7 @@
 */
 package com.osframework.modellibrary.system;
 
-import java.util.Enumeration;
 import java.util.GregorianCalendar;
-import java.util.Vector;
 
 import com.osframework.framework.logging.Debug;
 import com.osframework.modellibrary.common.DatabaseDataType;

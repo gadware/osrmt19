@@ -1,35 +1,29 @@
 package com.osrmt.appclient.traceability;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-import java.util.*;
-import java.text.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
-
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
 import com.osframework.appclient.ui.common.ControlPanel;
-import com.osframework.appclient.ui.common.FormControl;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
+import com.osframework.appclient.ui.components.UICenterSouthDialog;
+import com.osframework.appclient.ui.components.UIPanelButton;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.controls.UIValueList;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.ViewFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
 import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 import com.osrmt.modellibrary.reference.group.FormTitleGroup;
-import com.osrmt.modellibrary.reference.group.TableNameGroup;
-import com.osrmt.modellibrary.reqmanager.*;
+import com.osrmt.modellibrary.reqmanager.TraceTreeCriteria;
 
 
 public class TraceCriteriaForm extends UICenterSouthDialog {

@@ -1,15 +1,17 @@
 package com.osframework.framework.utility;
 
-import java.awt.event.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import javax.swing.text.JTextComponent;
-
-import org.mozilla.javascript.*;
+import org.mozilla.javascript.Context;
+import org.mozilla.javascript.ImporterTopLevel;
+import org.mozilla.javascript.Scriptable;
+import org.mozilla.javascript.ScriptableObject;
 
 import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.common.*;
+import com.osframework.modellibrary.common.IControlModel;
 
 public class ControlScript {
 	

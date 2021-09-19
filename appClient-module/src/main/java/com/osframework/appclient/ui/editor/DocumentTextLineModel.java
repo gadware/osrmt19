@@ -1,10 +1,6 @@
 package com.osframework.appclient.ui.editor;
 
 import java.awt.Component;
-import java.awt.Font;
-
-import javax.swing.JLabel;
-import javax.swing.JTable;
 
 public class DocumentTextLineModel implements IDocumentLine {
 

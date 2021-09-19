@@ -19,14 +19,11 @@
 
 */package com.osrmt.datalibrary.reqmanager;
 
-import java.sql.*;
-import java.util.*;
-
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.modellibrary.common.ServiceCall;
+import com.osrmt.modellibrary.reqmanager.ArtifactHistoryList;
 
 /**
 Artfiact History stores the image of a artifact prior to modification - along with the user/date who modified the record.  Additionally all baselines are stored.

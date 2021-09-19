@@ -1,27 +1,27 @@
 package com.osframework.framework.utility;
 
 import java.awt.Component;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.util.*;
+import java.util.Vector;
+
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JTextArea;
-import javax.swing.text.*;
+import javax.swing.text.JTextComponent;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.ImporterTopLevel;
 import org.mozilla.javascript.Scriptable;
 import org.mozilla.javascript.ScriptableObject;
 
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.components.MultiColumnList;
+import com.osframework.appclient.ui.components.UIAttachmentList;
+import com.osframework.appclient.ui.controls.UIDoubleField;
+import com.osframework.appclient.ui.controls.UIEditorPane;
+import com.osframework.appclient.ui.controls.UIIntegerField;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.ControlScript;
 import com.osframework.modellibrary.common.IControlModel;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 
 public class RuleScript {
 	

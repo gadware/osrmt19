@@ -1,29 +1,21 @@
 package com.osframework.appclient.ui.components;
 
 import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.FileDialog;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.management.j2ee.statistics.JavaMailStats;
-import javax.swing.*;
-import javax.swing.event.DocumentListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
 import javax.swing.text.Document;
 
-import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.listeners.TextDocListener;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+import com.osframework.appclient.ui.controls.IGetDocument;
+import com.osframework.appclient.ui.controls.UIJPanel;
 import com.osframework.framework.logging.Debug;
 import com.osframework.framework.utility.FileProcess;
-import com.osframework.framework.utility.FileSystemUtil;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.jgoodies.forms.*;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
 
 public class UIFilePath extends UIJPanel implements IGetDocument {
 

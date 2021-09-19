@@ -19,24 +19,12 @@
 
 */package com.osrmt.appclient.reqmanager;
 
-import javax.swing.event.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.util.*;
+import javax.swing.JMenuBar;
 
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.*;
+import com.osframework.appclient.ui.common.ApplicationActionList;
+import com.osframework.appclient.ui.common.MenuManager;
+import com.osframework.appclient.ui.controls.UIToolBar;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
 
 
 /**

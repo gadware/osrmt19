@@ -19,23 +19,14 @@
 
 */package com.osrmt.appclient.system;
 
-import javax.swing.event.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.util.*;
+import java.awt.event.ActionEvent;
 
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.*;
+import javax.swing.JFrame;
+
+import com.osframework.appclient.ui.common.ApplicationAction;
+import com.osframework.appclient.ui.common.ApplicationActionList;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osrmt.modellibrary.reference.group.ActionGroup;
 
 
 /**

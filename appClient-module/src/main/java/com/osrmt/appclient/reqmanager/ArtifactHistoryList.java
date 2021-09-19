@@ -6,12 +6,12 @@ package com.osrmt.appclient.reqmanager;
 import java.awt.Cursor;
 
 import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.components.MultiColumnList;
 import com.osframework.appclient.ui.controls.UIValueList;
 import com.osframework.appclient.ui.listeners.DoubleClickListener;
 import com.osframework.framework.logging.Debug;
 import com.osrmt.appclient.services.RequirementServices;
-import com.osrmt.modellibrary.reqmanager.*;
+import com.osrmt.modellibrary.reqmanager.ArtifactHistoryModel;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 /**
  * 

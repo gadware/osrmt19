@@ -1,11 +1,22 @@
 package com.osframework.framework.utility;
-import java.awt.*;
-import javax.swing.*;
-import java.awt.print.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
+import java.awt.Component;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.PrintGraphics;
+import java.awt.PrintJob;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
+import java.io.EOFException;
+import java.io.LineNumberReader;
+import java.io.StringReader;
 import java.util.Properties;
+
+import javax.swing.JFrame;
+import javax.swing.RepaintManager;
 
 /** A simple utility class that lets you very simply print
  *  an arbitrary component. Just pass the component to the

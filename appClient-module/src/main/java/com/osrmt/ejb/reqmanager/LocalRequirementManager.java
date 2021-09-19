@@ -20,16 +20,27 @@
 */
 package com.osrmt.ejb.reqmanager;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.modellibrary.reference.security.*;
+import java.util.List;
+
+import com.osframework.appclient.ui.tree.UITreeModel;
+import com.osframework.appclient.ui.tree.UITreeNode;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.modellibrary.common.DbCalendar;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.ComponentTypeGroup;
+import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentList;
+import com.osrmt.modellibrary.reqmanager.ArtifactHistoryList;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactMatrix;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
+import com.osrmt.modellibrary.reqmanager.BaselineList;
+import com.osrmt.modellibrary.reqmanager.BaselineModel;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeModel;
+import com.osrmt.modellibrary.reqmanager.TraceModel;
+import com.osrmt.modellibrary.reqmanager.TraceTreeCriteria;
 
 public interface LocalRequirementManager extends javax.ejb.EJBLocalObject, IRequirementManager
 {

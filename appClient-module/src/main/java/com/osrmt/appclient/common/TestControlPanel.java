@@ -1,16 +1,25 @@
 package com.osrmt.appclient.common;
 
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 
+import com.osframework.appclient.services.Application;
+import com.osframework.appclient.services.SecurityServices;
 import com.osframework.appclient.ui.common.GUI;
 import com.osframework.appclient.ui.common.IControlDef;
 import com.osframework.appclient.ui.common.UIFormLayout;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.modellibrary.reference.group.*;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.ViewFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 import com.osrmt.appclient.services.RequirementServices;
 import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 

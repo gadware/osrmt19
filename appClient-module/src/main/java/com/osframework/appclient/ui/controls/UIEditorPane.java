@@ -1,15 +1,15 @@
 package com.osframework.appclient.ui.controls;
 
-import java.awt.*;
-import java.awt.Insets;
-import java.awt.event.*;
-import java.io.IOException;
-import java.net.URL;
+import java.awt.Component;
+import java.awt.event.ActionEvent;
+import java.awt.event.KeyEvent;
 
-import javax.swing.*;
-import javax.swing.text.*;
-
-import com.jgoodies.forms.factories.Borders;
+import javax.swing.AbstractAction;
+import javax.swing.ActionMap;
+import javax.swing.FocusManager;
+import javax.swing.JTextPane;
+import javax.swing.KeyStroke;
+import javax.swing.text.StyledDocument;
 
 public class UIEditorPane extends JTextPane implements IGetDocument {
 

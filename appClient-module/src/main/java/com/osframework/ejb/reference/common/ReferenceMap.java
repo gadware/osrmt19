@@ -20,14 +20,19 @@
 */
 package com.osframework.ejb.reference.common;
 
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
+import com.osframework.modellibrary.reference.common.ReferenceGroupList;
+import com.osframework.modellibrary.reference.common.ReferenceGroupModel;
+import com.osframework.modellibrary.reference.common.ReferenceList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.common.ReferenceTreeList;
+import com.osframework.modellibrary.reference.common.ReferenceTreeModel;
+import com.osframework.modellibrary.reference.group.ModelColumnFramework;
 
 public interface ReferenceMap extends javax.ejb.EJBObject, IReferenceMap
 {

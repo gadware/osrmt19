@@ -6,7 +6,7 @@ package com.osframework.appclient.ui.controls;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 
-import com.osframework.appclient.ui.common.*;
+import com.osframework.appclient.ui.common.IParentMenu;
 /**
  * 
  *

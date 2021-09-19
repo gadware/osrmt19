@@ -1,11 +1,8 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.modellibrary.reference.security;
 
-import javax.swing.*;
-import javax.swing.text.JTextComponent;
-
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
+import com.osframework.appclient.ui.common.IControlDef;
+import com.osframework.appclient.ui.common.IHtmlApplicationControl;
 
 /**
 null

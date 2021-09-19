@@ -1,30 +1,25 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.util.GregorianCalendar;
 
-import java.util.*;
-import java.text.*;
-import javax.swing.event.*;
-import javax.swing.table.*;
-import javax.swing.text.*;
+import javax.swing.DefaultCellEditor;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.table.JTableHeader;
+import javax.swing.table.TableColumnModel;
 
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-
-import com.osframework.appclient.ui.common.ControlPanel;
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
+import com.osframework.appclient.ui.controls.UIDateField;
+import com.osframework.appclient.ui.controls.UIDoubleField;
+import com.osframework.appclient.ui.controls.UIIntegerField;
+import com.osframework.appclient.ui.controls.UITextField;
+import com.osframework.appclient.ui.controls.UIValueList;
+import com.osframework.modellibrary.common.ResultList;
+import com.osframework.modellibrary.reference.common.ReferenceList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 
 public class UIEditList extends UIValueList  {

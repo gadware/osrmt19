@@ -1,15 +1,18 @@
 package com.osrmt.appclient.changecontrol;
 import java.awt.BorderLayout;
-import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
 
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
+import javax.swing.FocusManager;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
 import com.osframework.appclient.ui.common.ControlPanel;
 import com.osframework.appclient.ui.common.GUI;
 import com.osframework.appclient.ui.common.SwingWorker;
@@ -18,30 +21,19 @@ import com.osframework.appclient.ui.components.FormPref;
 import com.osframework.appclient.ui.components.UIPanelButton;
 import com.osframework.appclient.ui.components.UIStandardDialog;
 import com.osframework.appclient.ui.controls.UIProperties;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import javax.servlet.http.*;
-import javax.swing.FocusManager;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
-import org.apache.struts.*;
-import org.apache.struts.action.*;
-
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
 import com.osrmt.appclient.common.ApplicationObject;
 import com.osrmt.appclient.services.IssueServices;
-import com.osrmt.appclient.services.RequirementServices;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.issue.IssueModel;
 import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 import com.osrmt.modellibrary.reference.group.FormButtonTextGroup;
 import com.osrmt.modellibrary.reference.group.FormTitleGroup;
 import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
-import com.osrmt.modellibrary.reference.group.RelationGroup;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.modellibrary.issue.*;
 
 public class ChangeControlForm extends UIStandardDialog {
 	

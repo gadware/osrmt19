@@ -20,7 +20,6 @@
 */
 package com.osrmt.ejb.issue;
 import javax.naming.NoInitialContextException;
-import com.osframework.modellibrary.common.*;
 
 public class IssueUtil
 {

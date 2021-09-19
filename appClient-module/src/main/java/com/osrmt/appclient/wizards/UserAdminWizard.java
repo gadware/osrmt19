@@ -1,28 +1,39 @@
 package com.osrmt.appclient.wizards;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.print.*;
-import java.util.*;
-import javax.print.*;
-import javax.swing.*;
-import javax.swing.event.*;
+import java.awt.Dimension;
+import java.awt.HeadlessException;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.event.ListSelectionEvent;
+
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.IReceiveMessage;
+import com.osframework.appclient.ui.common.ISApplicationMediator;
+import com.osframework.appclient.ui.common.ISEvent;
+import com.osframework.appclient.ui.common.UIContext;
+import com.osframework.appclient.ui.components.MultiColumnList;
+import com.osframework.appclient.ui.components.PanelAddRemove;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.listeners.DoubleClickListener;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.appclient.ui.listeners.UIListSelectionListener;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.system.*;
-import com.osrmt.appclient.system.*;
-import com.osrmt.modellibrary.reference.group.*;
+import com.osframework.modellibrary.common.ResultColumnException;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.FormTitleFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationUserList;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
+import com.osrmt.appclient.system.UserFormController;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 
 
 public class UserAdminWizard {

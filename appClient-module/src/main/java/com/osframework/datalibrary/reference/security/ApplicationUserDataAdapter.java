@@ -1,19 +1,14 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.datalibrary.reference.security;
 
-import java.sql.*;
-import java.util.*;
+import java.util.Enumeration;
 
-import com.osframework.ejb.reference.common.IReferenceMap;
-import com.osframework.ejb.reference.common.ReferenceMap;
-import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.framework.logging.*;
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.ServiceCall;
-import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
+import com.osframework.modellibrary.reference.security.ApplicationUserList;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 
 public class ApplicationUserDataAdapter extends ApplicationUserDbAdapter{ 
 	

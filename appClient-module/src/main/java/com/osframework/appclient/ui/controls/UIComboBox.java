@@ -3,12 +3,12 @@ package com.osframework.appclient.ui.controls;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Vector;
 
 import javax.swing.ComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.event.ListDataEvent;
-import com.osframework.appclient.ui.listeners.*;
+
+import com.osframework.appclient.ui.listeners.UIListDataListener;
 
 public class UIComboBox extends JComboBox implements IGetCombo {
 

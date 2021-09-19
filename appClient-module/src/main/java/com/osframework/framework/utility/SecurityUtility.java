@@ -1,6 +1,7 @@
 package com.osframework.framework.utility;
 
-import java.security.*;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class SecurityUtility {
 

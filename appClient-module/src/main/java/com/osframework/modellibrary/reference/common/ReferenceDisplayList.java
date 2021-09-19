@@ -1,9 +1,11 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.modellibrary.reference.common;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import javax.swing.*;
+import javax.swing.ComboBoxModel;
+import javax.swing.ListModel;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 

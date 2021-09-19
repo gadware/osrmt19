@@ -1,32 +1,20 @@
 package com.osrmt.appclient.system;
 import java.awt.BorderLayout;
-import java.awt.FileDialog;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
 
-import com.jgoodies.forms.layout.CellConstraints;
-import com.jgoodies.forms.layout.FormLayout;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.controls.UIJPanel;
-import com.osframework.appclient.ui.controls.UILabel;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osrmt.www.services.*;
-import javax.servlet.http.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
 import javax.swing.text.Document;
 
-import org.apache.struts.*;
-import org.apache.struts.action.*;
-import com.osrmt.modellibrary.reqmanager.*;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UILabel;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationCustomControlModel;
 
 public class ApplicationCustomControl extends UIJPanel {
 

@@ -1,10 +1,14 @@
 package com.osframework.framework.utility;
 
-import java.sql.*;
-import java.util.*;
-import java.io.*;
-import java.net.*;
-import java.beans.*;
+import java.beans.XMLDecoder;
+import java.beans.XMLEncoder;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.Serializable;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import com.osframework.framework.logging.Debug;
 

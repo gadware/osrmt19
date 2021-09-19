@@ -1,8 +1,9 @@
 package com.osframework.appclient.ui.components;
-import java.util.*;
-import java.awt.event.*;
-import java.awt.*;
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+
+import javax.swing.JButton;
 
 import com.osframework.framework.logging.Debug;
 

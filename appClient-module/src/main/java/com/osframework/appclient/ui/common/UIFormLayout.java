@@ -2,12 +2,17 @@ package com.osframework.appclient.ui.common;
 
 import java.awt.Component;
 import java.awt.Dimension;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import javax.swing.*;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
+import javax.swing.JEditorPane;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
-import java.util.*;
+import com.jgoodies.forms.builder.PanelBuilder;
+import com.jgoodies.forms.layout.CellConstraints;
+import com.jgoodies.forms.layout.FormLayout;
 
 /**
  * <pre>

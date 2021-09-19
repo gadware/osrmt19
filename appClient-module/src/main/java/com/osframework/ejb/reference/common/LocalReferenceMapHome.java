@@ -20,10 +20,6 @@
 */
 package com.osframework.ejb.reference.common;
 
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.common.*;
 public interface LocalReferenceMapHome extends javax.ejb.EJBLocalHome
 {
 	public static final String COMP_NAME="LocalReferenceMapName";

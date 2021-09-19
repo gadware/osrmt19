@@ -1,9 +1,13 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.Dialog;
+import java.awt.Frame;
+import java.awt.HeadlessException;
 
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIJDialog;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
 
 /**
  * Creates a dialog of the form

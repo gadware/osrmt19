@@ -1,15 +1,9 @@
 package com.osframework.appclient.ui.components;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowStateListener;
+import java.awt.BorderLayout;
 
-import javax.swing.*;
-
-import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
 
 /**
  * <pre>

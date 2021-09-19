@@ -20,22 +20,19 @@
 */
 package com.osrmt.appclient.reqmanager;
 
-import java.awt.*;
-import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.Component;
+
 import javax.swing.JPanel;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
+import javax.swing.JSplitPane;
+import javax.swing.JTabbedPane;
+
+import com.jgoodies.forms.builder.DefaultFormBuilder;
+import com.osframework.appclient.ui.common.LayoutUtility;
 import com.osframework.appclient.ui.controls.UIJFrame;
-import com.osframework.modellibrary.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osrmt.appclient.common.*;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 public class RequirementManagerUI extends UIJFrame {
 

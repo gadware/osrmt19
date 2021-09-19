@@ -1,6 +1,6 @@
 package com.osframework.framework.logging;
 
-import java.util.*;
+import java.util.Calendar;
 
 public class DebugEntry {
 	public Calendar Date = Calendar.getInstance();

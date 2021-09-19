@@ -1,20 +1,17 @@
 package com.osrmt.appclient.common;
 
-import java.io.Serializable;
 import java.util.Enumeration;
 
 import com.osframework.appclient.services.Application;
 import com.osframework.appclient.services.BaseApplicationObject;
-import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.tree.*;
+import com.osframework.appclient.ui.tree.UIScrollTree;
 import com.osrmt.appclient.changecontrol.ChangeControlViewController;
 import com.osrmt.appclient.reqmanager.RequirementManagerController;
+import com.osrmt.appclient.traceability.TraceabilityViewController;
+import com.osrmt.modellibrary.issue.IssueList;
 import com.osrmt.modellibrary.reqmanager.ArtifactList;
 import com.osrmt.modellibrary.reqmanager.ArtifactModel;
-import com.osrmt.modellibrary.issue.*;
-import com.osrmt.appclient.traceability.TraceabilityViewController;
 
 public class ApplicationObject extends BaseApplicationObject {
 	

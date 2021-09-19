@@ -1,13 +1,6 @@
 package com.osrmt.appclient.setup;
 
-import java.util.Enumeration;
-import java.io.*;
-
 import com.osframework.datalibrary.common.ConnectionProperty;
-import com.osrmt.modellibrary.reference.group.RelationGroup;
-import com.osrmt.modellibrary.reqmanager.*;
-// import com.osupgrade.utility.SerializeUtility;
-// import com.osupgrade.model.*;
 
 
 public class UpgradeManager extends ConsoleManager {

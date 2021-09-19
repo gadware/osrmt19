@@ -19,15 +19,11 @@
 */
 package com.osframework.modellibrary.reference.security;
 
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.ejb.reference.common.*;
-import com.osframework.framework.logging.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
+
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.security.ISecurity;
 
 /**
 null

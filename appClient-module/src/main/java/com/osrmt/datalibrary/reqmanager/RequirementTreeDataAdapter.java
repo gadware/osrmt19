@@ -1,17 +1,22 @@
 package com.osrmt.datalibrary.reqmanager;
 
-import java.sql.*;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import com.osframework.modellibrary.common.DbCalendar;
-import com.osframework.modellibrary.reference.group.ComponentTypeFramework;
-import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.SQLResult;
+import com.osframework.datalibrary.common.UpdateResult;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.DbCalendar;
+import com.osframework.modellibrary.reference.group.SystemMessageFramework;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeList;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeModel;
 
 /**
  * The ReferenceTree model is a domain object which stores lookup table id which have a parent/child

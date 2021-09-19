@@ -1,6 +1,7 @@
 package com.osframework.modellibrary.framework;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import com.osframework.modellibrary.common.ResultList;
 

@@ -1,8 +1,14 @@
 package com.osframework.appclient.ui.editor;
 
 import java.awt.BorderLayout;
-import javax.swing.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+
 import com.osframework.appclient.ui.common.GUI;
 import com.osframework.framework.utility.FileSystemUtil;
 

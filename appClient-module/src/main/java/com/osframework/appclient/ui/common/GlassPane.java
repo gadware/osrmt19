@@ -1,17 +1,18 @@
 package com.osframework.appclient.ui.common;
 
 import java.awt.AWTEvent;
-import java.awt.Toolkit;
 import java.awt.Component;
 import java.awt.Cursor;
+import java.awt.Toolkit;
 import java.awt.Window;
 import java.awt.event.AWTEventListener;
-import java.awt.event.KeyEvent;
 import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
+
 import javax.swing.JComponent;
-import javax.swing.SwingUtilities;
 import javax.swing.RootPaneContainer;
+import javax.swing.SwingUtilities;
 
 /**
  * This is the glass pane class that intercepts screen interactions during system busy states.

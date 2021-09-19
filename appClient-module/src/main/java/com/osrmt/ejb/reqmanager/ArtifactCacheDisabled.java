@@ -3,11 +3,15 @@
  */
 package com.osrmt.ejb.reqmanager;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
 
+import com.osframework.framework.utility.ReaderWriter;
 import com.osframework.modellibrary.common.DbCalendar;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.framework.utility.*;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 /**
  * ArtifactCache holds a caches artifact results sets.
  * Cache is cleared when an artifact is updated.

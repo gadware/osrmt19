@@ -1,55 +1,29 @@
 package com.osrmt.appclient.changecontrol;
 
-import java.awt.BorderLayout;
-import java.awt.Dimension;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeNode;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import com.osrmt.modellibrary.issue.*;
-import com.osrmt.appclient.changecontrol.ChangeControlViewController;
-import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osrmt.appclient.traceability.TraceabilityViewController;
-import com.osrmt.appclient.wizards.*;
-import com.osframework.datalibrary.common.Access;
-import com.osframework.datalibrary.common.Db;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.ClientProperty;
-import com.osframework.framework.utility.TimedAction;
-import com.osframework.appclient.services.Application;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.appclient.services.ReportWriterServices;
-import com.osframework.appclient.services.SecurityServices;
-import com.osframework.appclient.services.SystemServices;
-import com.osframework.appclient.system.SystemLogForm;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.UIJDialog;
-import com.osframework.appclient.ui.controls.UIMenuItem;
-import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.common.ApplicationAction;
+import com.osframework.appclient.ui.common.ApplicationActionList;
+import com.osframework.appclient.ui.common.ControlState;
 import com.osframework.appclient.ui.listeners.DoubleClickListener;
 import com.osframework.appclient.ui.listeners.UIActionListener;
-import com.osframework.modellibrary.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.ReferenceGroup;
-import com.osframework.modellibrary.reference.group.SystemInfoFramework;
-import com.osframework.modellibrary.reportwriter.ReportModel;
-import com.osframework.modellibrary.system.RecordFileModel;
-import com.osframework.modellibrary.system.RecordParameterControlList;
-import com.osframework.modellibrary.reference.group.*;
-import com.osrmt.appclient.artifact.form.*;
-import com.osrmt.appclient.artifact.graph.TraceabilityGraph;
-import com.osrmt.appclient.artifact.graph.UIGraph;
-import javax.swing.tree.TreePath;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.FormTitleFramework;
+import com.osrmt.appclient.common.ApplicationObject;
+import com.osrmt.appclient.services.IssueServices;
+import com.osrmt.appclient.wizards.ReportWizard;
+import com.osrmt.modellibrary.issue.IssueCriteria;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.issue.IssueModel;
+import com.osrmt.modellibrary.reference.group.ActionGroup;
+import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
 
 public class ChangeControlActions {
 	

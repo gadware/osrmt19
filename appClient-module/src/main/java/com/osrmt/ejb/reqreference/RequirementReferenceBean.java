@@ -23,22 +23,19 @@ package com.osrmt.ejb.reqreference;
 
 import java.util.Enumeration;
 
-import javax.ejb.*;
-import com.osframework.framework.logging.*;
-import com.osframework.datalibrary.common.*;
+import javax.ejb.EntityBean;
+import javax.ejb.EntityContext;
+
+import com.osframework.datalibrary.common.DataAccessException;
 import com.osframework.datalibrary.reference.common.ReferenceGroupDataAdapter;
-import com.osframework.modellibrary.common.*;
-import com.osframework.ejb.common.*;
+import com.osframework.ejb.common.BaseBean;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.common.ReferenceMapBean;
-import com.osframework.ejb.reference.common.ReferenceMapUtil;
-import com.osframework.ejb.system.SystemUtil;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osrmt.ejb.issue.IssueBean;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.common.ReferenceGroupList;
+import com.osframework.modellibrary.reference.common.ReferenceGroupModel;
 import com.osrmt.modellibrary.reference.group.ReferenceCategoryGroup;
-import com.osrmt.modellibrary.reference.group.ReferenceModificationGroup;
 
 
 

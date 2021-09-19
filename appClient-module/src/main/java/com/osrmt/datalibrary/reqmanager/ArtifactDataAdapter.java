@@ -1,14 +1,21 @@
 package com.osrmt.datalibrary.reqmanager;
 
-import java.sql.*;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Vector;
 
-import com.osrmt.modellibrary.reference.group.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 import com.osframework.framework.logging.Debug;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.ComponentTypeGroup;
+import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reference.group.TraceTreeGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 /**
 null

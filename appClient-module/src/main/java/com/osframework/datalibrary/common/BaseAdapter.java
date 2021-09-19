@@ -1,6 +1,7 @@
 package com.osframework.datalibrary.common;
 
-import java.sql.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * BaseAdapter is inherited by all data adapters.  Methods common

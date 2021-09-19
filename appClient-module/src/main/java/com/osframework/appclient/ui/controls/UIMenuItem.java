@@ -1,6 +1,8 @@
 package com.osframework.appclient.ui.controls;
 
-import javax.swing.*;
+import javax.swing.Action;
+import javax.swing.Icon;
+import javax.swing.JMenuItem;
 
 import com.osframework.appclient.ui.common.ApplicationAction;
 

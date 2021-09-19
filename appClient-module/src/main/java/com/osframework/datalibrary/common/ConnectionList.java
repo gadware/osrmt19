@@ -14,7 +14,6 @@ import javax.swing.ComboBoxModel;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 
-import com.osframework.appclient.ui.common.EnvironmentProperty;
 import com.osframework.framework.logging.Debug;
 
 public class ConnectionList extends Vector implements ComboBoxModel {

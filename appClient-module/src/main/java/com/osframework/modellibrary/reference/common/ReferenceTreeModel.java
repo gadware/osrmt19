@@ -1,8 +1,6 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.modellibrary.reference.common;
 
-import java.util.GregorianCalendar;
-
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
 import com.osframework.modellibrary.common.ResultColumnList;

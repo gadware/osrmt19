@@ -1,6 +1,7 @@
 package com.osframework.appclient.ui.controls;
 
-import java.awt.event.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 
 import javax.swing.JTextField;
 import javax.swing.text.Document;

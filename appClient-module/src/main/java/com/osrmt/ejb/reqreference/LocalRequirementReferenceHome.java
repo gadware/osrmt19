@@ -20,10 +20,6 @@
 */
 package com.osrmt.ejb.reqreference;
 
-import com.osframework.appclient.ui.tree.*;
-import java.util.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.common.*;
 public interface LocalRequirementReferenceHome extends javax.ejb.EJBLocalHome
 {
 	public static final String COMP_NAME="LocalRequirementReferenceName";

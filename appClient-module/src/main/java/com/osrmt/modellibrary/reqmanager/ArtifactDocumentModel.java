@@ -21,11 +21,11 @@
 package com.osrmt.modellibrary.reqmanager;
 
 import com.osframework.appclient.ui.common.GUI;
-import com.osframework.appclient.ui.editor.*;
-import com.osframework.ejb.reference.common.IReferenceMap;
-import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.modellibrary.system.*;
-import com.osframework.framework.utility.*;
+import com.osframework.appclient.ui.editor.DocumentTextLineModel;
+import com.osframework.appclient.ui.editor.IDocumentLine;
+import com.osframework.appclient.ui.editor.ImageLineModel;
+import com.osframework.framework.utility.FileProcess;
+import com.osframework.modellibrary.system.RecordFileModel;
 
 /**
 null

@@ -19,28 +19,25 @@
 
 */package com.osrmt.appclient.system;
 
-import javax.swing.event.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.security.NoSuchAlgorithmException;
-import java.util.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.reference.common.*;
+import javax.swing.JFrame;
+
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.SecurityUtility;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
 import com.osframework.modellibrary.reference.group.FormTitleFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.*;
-import com.osrmt.appclient.setting.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
+import com.osrmt.appclient.setting.AuthenticationSetting;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 
 
 /**

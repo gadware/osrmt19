@@ -9,7 +9,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import com.jgoodies.forms.builder.DefaultFormBuilder;
-import com.osframework.appclient.services.*;
+import com.osframework.appclient.services.SecurityServices;
 import com.osframework.appclient.ui.common.LayoutUtility;
 import com.osframework.appclient.ui.components.UIReferenceSearch;
 import com.osframework.framework.logging.Debug;

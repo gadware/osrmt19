@@ -19,15 +19,12 @@
 
 */package com.osrmt.datalibrary.reqmanager;
 
-import java.sql.*;
-import java.util.*;
+import java.util.Vector;
 
-import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
-import com.osrmt.modellibrary.reference.group.RelationGroup;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osframework.datalibrary.common.*;
+import com.osframework.datalibrary.common.DataAccessException;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.security.ISecurity;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentList;
 
 /**
 null

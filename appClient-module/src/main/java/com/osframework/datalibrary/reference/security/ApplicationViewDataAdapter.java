@@ -20,20 +20,23 @@
 */package com.osframework.datalibrary.reference.security;
 
 import java.rmi.RemoteException;
-import java.sql.*;
-import java.util.*;
+import java.util.Enumeration;
 
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.DataUpdateException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.SQLResult;
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.security.ISecurity;
+import com.osframework.framework.logging.Debug;
 import com.osframework.modellibrary.reference.common.ReferenceDisplay;
 import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
 import com.osframework.modellibrary.reference.group.ArtifactFramework;
-import com.osframework.modellibrary.reference.group.PositionFramework;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.datalibrary.common.*;
-import com.osframework.ejb.reference.common.IReferenceMap;
-import com.osframework.ejb.reference.security.ISecurity;
-import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.reference.group.ViewFramework;
+import com.osframework.modellibrary.reference.security.ApplicationViewList;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
 
 /**
 null

@@ -1,10 +1,13 @@
 package com.osframework.modellibrary.framework;
 
 import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.Vector;
+
+import org.apache.xpath.operations.String;
+import org.eclipse.jdt.internal.core.util.Util.Comparable;
 
 import com.osframework.modellibrary.common.DbCalendar;
+
+import antlr.collections.impl.Vector;
 
 /*
  * SysLogModel represents a system log entry.

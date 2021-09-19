@@ -2,35 +2,38 @@
 //************ UNLESS YOU SET OVERWRITE IND = 0 IN TABLE EJBLIBRARY *********//
 package com.osframework.ejb.system;
 
-import java.util.*;
 import java.rmi.RemoteException;
+import java.util.Calendar;
+import java.util.Enumeration;
+import java.util.Random;
 
-import javax.ejb.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.ejb.common.*;
+import javax.ejb.EntityBean;
+import javax.ejb.EntityContext;
+
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.system.RecordFileDataAdapter;
+import com.osframework.datalibrary.system.RecordFileHistoryDataAdapter;
+import com.osframework.datalibrary.system.RecordParameterDataAdapter;
+import com.osframework.ejb.common.BaseBean;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.common.ReferenceMapBean;
-import com.osframework.ejb.reference.common.ReferenceMapUtil;
-import com.osframework.ejb.reportwriter.ReportWriterBean;
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.FileProcess;
+import com.osframework.framework.utility.FileSystemUtil;
+import com.osframework.modellibrary.common.ServiceCall;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
 import com.osframework.modellibrary.reference.group.ApplicationSettingFramework;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
 import com.osframework.modellibrary.reference.group.ViewFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.datalibrary.system.*;
-import com.osframework.modellibrary.system.*;
-import com.osrmt.modellibrary.reqmanager.BaselineModel;
-
-import net.sf.jasperreports.view.JasperViewer;
-import net.sf.jasperreports.engine.xml.JRXmlLoader;
-import net.sf.jasperreports.engine.design.JasperDesign;
-import net.sf.jasperreports.engine.*;
-import java.io.OutputStream;
+import com.osframework.modellibrary.reference.security.ApplicationSettingList;
+import com.osframework.modellibrary.reference.security.ApplicationSettingModel;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
+import com.osframework.modellibrary.system.RecordFileHistoryModel;
+import com.osframework.modellibrary.system.RecordFileList;
+import com.osframework.modellibrary.system.RecordFileModel;
+import com.osframework.modellibrary.system.RecordParameterList;
+import com.osframework.modellibrary.system.RecordParameterModel;
 
 
 

@@ -1,6 +1,8 @@
 package com.osframework.datalibrary.common;
 
-import java.sql.*;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 import com.osframework.framework.logging.Debug;
 

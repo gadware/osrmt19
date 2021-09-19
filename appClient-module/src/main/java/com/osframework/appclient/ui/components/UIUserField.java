@@ -2,8 +2,9 @@ package com.osframework.appclient.ui.components;
 
 
 
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.common.*;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.controls.IGetCombo;
+import com.osframework.appclient.ui.controls.UIComboBox;
 
 public class UIUserField extends UIComboBox implements IGetCombo {
 

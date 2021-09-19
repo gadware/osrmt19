@@ -20,13 +20,6 @@
 */
 package com.osframework.ejb.reference.security;
 
-import java.util.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.ui.tree.*;
-import javax.swing.tree.*;
-import com.osframework.modellibrary.reference.group.*;
-
 public interface SecurityHome extends javax.ejb.EJBHome
 {
 	public static final String COMP_NAME="SecurityName";

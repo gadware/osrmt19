@@ -3,7 +3,6 @@ package com.osframework.appclient.services;
 import java.util.Hashtable;
 
 import com.osframework.modellibrary.common.ServiceCall;
-import com.osframework.modellibrary.reference.security.ApplicationControlList;
 
 public class BaseService {
 	

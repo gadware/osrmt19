@@ -2,34 +2,40 @@ package com.osrmt.appclient.system;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.awt.Image;
 import java.awt.Toolkit;
-import java.awt.event.*;
-import java.util.Enumeration;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
-import javax.swing.*;
+import javax.swing.ComboBoxModel;
+import javax.swing.JEditorPane;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.SwingUtilities;
 
-import java.io.*;
-import com.osframework.framework.utility.ClientUtility;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.components.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.common.IParent;
+import com.osframework.appclient.ui.controls.UIComboBox;
 import com.osframework.appclient.ui.listeners.KeyEnterListener;
 import com.osframework.appclient.ui.listeners.UIActionListener;
-import com.osframework.datalibrary.common.*;
-import com.osframework.ejb.reference.security.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.*;
+import com.osframework.datalibrary.common.ConnectionList;
+import com.osframework.datalibrary.common.ConnectionProperty;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ClientUtility;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
-import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
 import com.osframework.modellibrary.reference.group.FormTitleFramework;
-import com.osframework.modellibrary.reference.group.SystemInfoFramework;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
 import com.osrmt.GlobalConstants;
-import com.osrmt.appclient.setting.*;
-import com.osrmt.modellibrary.reference.group.*;
+import com.osrmt.appclient.setting.AuthenticationSetting;
+import com.osrmt.appclient.setting.DataFormatSetting;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 /**
  * Login Controller authenticates the user setting the parent
  * forms object to the users UserModel. 

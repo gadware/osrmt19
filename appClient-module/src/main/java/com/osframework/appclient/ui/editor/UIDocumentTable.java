@@ -1,29 +1,23 @@
 package com.osframework.appclient.ui.editor;
 
 import java.awt.Component;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseMotionListener;
-import java.util.EventObject;
 
 import javax.swing.JLabel;
 import javax.swing.JTable;
-import javax.swing.event.CellEditorListener;
-import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumnModel;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.framework.logging.*;
 
 import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.common.ISApplicationMediator;
+import com.osframework.appclient.ui.common.ISEvent;
+import com.osframework.appclient.ui.common.UIContext;
 import com.osframework.appclient.ui.controls.UIPopupMenu;
-import com.osframework.appclient.ui.tree.UITreeNode;
-import com.osrmt.appclient.reqmanager.RequirementManagerTools;
-import com.osrmt.modellibrary.reqmanager.ArtifactModel;
+import com.osframework.framework.logging.Debug;
 /**
  * UITextTable is a table fulfilling the function
  * of a text editor.

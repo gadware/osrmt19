@@ -20,29 +20,22 @@
 */
 package com.osrmt.appclient.reqmanager;
 
-import java.awt.*;
-import javax.swing.*;
 import java.awt.BorderLayout;
-import javax.swing.JPanel;
-import javax.swing.JButton;
-import java.awt.FlowLayout;
-import java.awt.event.ActionListener;
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-import com.osrmt.appclient.common.*;
+import java.awt.Component;
 
+import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
+import javax.swing.JPanel;
+import javax.swing.JTabbedPane;
 
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.UIJFrame;
-import com.osframework.modellibrary.common.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.controls.*;
+import com.jgoodies.forms.builder.DefaultFormBuilder;
+import com.osframework.appclient.ui.common.LayoutUtility;
+import com.osframework.appclient.ui.components.PanelOkCancel;
+import com.osframework.appclient.ui.controls.UIJDialog;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 /**
 null

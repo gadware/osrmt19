@@ -85,6 +85,7 @@
 		  <configuration>
 		    <descriptor>src/assembly/bin.xml</descriptor>
 		    <finalName>osrmt.desktop</finalName>
+		    <outputDirectory>${basedir}</outputDirectory>
 		  </configuration>
 		  <executions>
 		    <execution>

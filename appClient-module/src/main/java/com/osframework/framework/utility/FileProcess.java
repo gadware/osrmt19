@@ -1,9 +1,9 @@
 package com.osframework.framework.utility;
 
-import java.io.*;
-import java.util.*;
-
-import com.osframework.framework.logging.Debug;
+import java.io.File;
+import java.io.IOException;
+import java.util.Calendar;
+import java.util.Random;
 
 public class FileProcess {
 	

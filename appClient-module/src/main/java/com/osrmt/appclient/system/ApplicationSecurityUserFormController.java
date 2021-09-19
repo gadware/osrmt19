@@ -20,27 +20,37 @@
 */
 package com.osrmt.appclient.system;
 
-import javax.swing.event.*;
-import javax.swing.*;
-import java.awt.event.*;
-import java.awt.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.appclient.system.*;
-import com.osrmt.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
-import com.osframework.appclient.services.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.components.MultiColumnList;
+import com.osframework.appclient.ui.components.PanelAddRemove;
+import com.osframework.appclient.ui.components.PanelOkCancel;
+import com.osframework.appclient.ui.components.UICenterSouthDialog;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.listeners.UIActionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.TimedAction;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.FormTitleFramework;
+import com.osframework.modellibrary.reference.group.PositionFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityModel;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
+import com.osframework.modellibrary.reference.security.ApplicationViewList;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
+import com.osrmt.modellibrary.reference.group.TableNameGroup;
 
 
 /**

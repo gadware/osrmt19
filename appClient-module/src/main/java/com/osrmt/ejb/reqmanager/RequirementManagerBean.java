@@ -2,34 +2,73 @@
 //************ UNLESS YOU SET OVERWRITE IND = 0 IN TABLE EJBLIBRARY *********//
 package com.osrmt.ejb.reqmanager;
 
-import javax.ejb.*;
-
 import java.rmi.RemoteException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.Vector;
+
+import javax.ejb.EntityBean;
+import javax.ejb.EntityContext;
 
 import com.osframework.appclient.ui.tree.UITreeModel;
-import com.osframework.ejb.reference.common.*;
-import com.osframework.ejb.system.*;
-import com.osframework.framework.logging.*;
-import com.osframework.appclient.ui.tree.*;
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.framework.*;
-import  com.osframework.framework.utility.*;
-import com.osrmt.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.ejb.common.*;
+import com.osframework.appclient.ui.tree.UITreeNode;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.ejb.common.BaseBean;
+import com.osframework.ejb.common.BeanTransaction;
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.common.ReferenceMapBean;
+import com.osframework.ejb.system.ISystem;
+import com.osframework.ejb.system.SystemBean;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.modellibrary.common.DbCalendar;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
+import com.osframework.modellibrary.reference.common.ReferenceList;
 import com.osframework.modellibrary.reference.common.ReferenceModel;
 import com.osframework.modellibrary.reference.group.ApplicationFramework;
 import com.osframework.modellibrary.reference.group.RecordTypeFramework;
 import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osframework.modellibrary.reference.group.ProductFramework;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityList;
+import com.osframework.modellibrary.reference.security.ApplicationSecurityModel;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
+import com.osframework.modellibrary.system.RecordFileList;
 import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.datalibrary.reqmanager.*;
-import com.osrmt.modellibrary.reqmanager.*;
 import com.osrmt.appclient.setting.DataFormatSetting;
+import com.osrmt.datalibrary.reqmanager.ArtifactDataAdapter;
+import com.osrmt.datalibrary.reqmanager.ArtifactDocumentDataAdapter;
+import com.osrmt.datalibrary.reqmanager.ArtifactHistoryDataAdapter;
+import com.osrmt.datalibrary.reqmanager.BaselineDataAdapter;
+import com.osrmt.datalibrary.reqmanager.RequirementTreeDataAdapter;
+import com.osrmt.datalibrary.reqmanager.RequirementTreeHistoryDataAdapter;
+import com.osrmt.modellibrary.reference.group.ApplicationGroup;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.ComponentTypeGroup;
+import com.osrmt.modellibrary.reference.group.RelationGroup;
+import com.osrmt.modellibrary.reference.group.TableNameGroup;
+import com.osrmt.modellibrary.reference.group.TraceTreeGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentList;
+import com.osrmt.modellibrary.reqmanager.ArtifactDocumentModel;
+import com.osrmt.modellibrary.reqmanager.ArtifactHistoryList;
+import com.osrmt.modellibrary.reqmanager.ArtifactHistoryModel;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactMatrix;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
+import com.osrmt.modellibrary.reqmanager.BaselineExistsException;
+import com.osrmt.modellibrary.reqmanager.BaselineList;
+import com.osrmt.modellibrary.reqmanager.BaselineModel;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeHistoryModel;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeList;
+import com.osrmt.modellibrary.reqmanager.RequirementTreeModel;
+import com.osrmt.modellibrary.reqmanager.TraceModel;
+import com.osrmt.modellibrary.reqmanager.TraceTreeCriteria;
 
 
 public class RequirementManagerBean extends BaseBean implements EntityBean, IRequirementManager {

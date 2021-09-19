@@ -1,7 +1,17 @@
 package com.osframework.appclient.ui.common;
 
-import java.awt.*;
-import java.awt.datatransfer.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Cursor;
+import java.awt.Dimension;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusAdapter;
@@ -9,40 +19,48 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
-import java.beans.PropertyChangeEvent;
-import java.beans.PropertyChangeListener;
-import java.util.*;
-import java.io.*;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import javax.swing.*;
-import javax.swing.table.*;
+import javax.swing.ComboBoxModel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JComboBox;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.UIManager;
+import javax.swing.event.DocumentEvent;
+import javax.swing.table.DefaultTableCellRenderer;
+import javax.swing.table.TableCellRenderer;
+import javax.swing.table.TableColumn;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
-import javax.swing.text.JTextComponent;
-import javax.swing.border.Border;
-import javax.swing.event.*;
-
-import org.mozilla.javascript.JavaScriptException;
 
 import com.jgoodies.forms.factories.Borders;
 import com.jgoodies.looks.LookUtils;
 import com.jgoodies.looks.Options;
-import com.jgoodies.looks.plastic.PlasticComboBoxUI;
 import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.appclient.system.SystemLogForm;
 import com.osframework.appclient.ui.components.MultiColumnList;
-import com.osframework.appclient.ui.controls.*;
+import com.osframework.appclient.ui.controls.UIComboBox;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UILabel;
 import com.osframework.appclient.ui.listeners.DoubleClickListener;
 import com.osframework.framework.logging.Debug;
-import com.osframework.framework.logging.DebugConfig;
 import com.osframework.framework.logging.DebugLevel;
 import com.osframework.framework.logging.DebugMessage;
 import com.osframework.framework.utility.FileProcess;
 import com.osframework.modellibrary.common.IControlModel;
 import com.osframework.modellibrary.common.ResultList;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.modellibrary.reference.group.SystemMessageFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 /**
  * The GUI class is a temporary location for uncategorized framework 'helper' methods

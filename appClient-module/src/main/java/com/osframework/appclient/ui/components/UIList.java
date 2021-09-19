@@ -1,8 +1,9 @@
 package com.osframework.appclient.ui.components;
 
-import java.util.*;
+import java.util.Enumeration;
 
-import javax.swing.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JList;
 
 /*
  * 		UIList list = new UIList(new DefaultListModel());

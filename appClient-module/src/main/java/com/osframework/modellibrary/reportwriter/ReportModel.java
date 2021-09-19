@@ -20,13 +20,6 @@
 */
 package com.osframework.modellibrary.reportwriter;
 
-import java.util.GregorianCalendar;
-
-import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-
-
 /**
 null
 */

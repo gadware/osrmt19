@@ -1,21 +1,23 @@
 package com.osrmt.appclient.setup;
 
-import java.io.*;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
 
-import javax.swing.JOptionPane;
-
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.services.SystemServices;
-import com.osframework.datalibrary.common.*;
-import com.osframework.framework.utility.FileSystemUtil;
-import com.osframework.framework.utility.SerializeUtility;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.security.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.modellibrary.reference.common.ReferenceGroupList;
+import com.osframework.modellibrary.reference.common.ReferenceGroupModel;
+import com.osframework.modellibrary.reference.common.ReferenceList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
 import com.osframework.modellibrary.reference.group.ReferenceModificationFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
 
 public class LanguageManager extends ConsoleManager {
 

@@ -21,52 +21,55 @@
 //************ UNLESS YOU SET OVERWRITE IND = 0 IN TABLE EJBLIBRARY *********//
 package com.osframework.ejb.reportwriter;
 
-import java.util.*;
-import java.io.*;
-import java.lang.*;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.rmi.RemoteException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Map;
 
-import javax.ejb.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.ControlScript;
-import com.osframework.framework.utility.FileProcess;
-import com.osframework.framework.utility.FileSystemUtil;
-import com.osframework.framework.utility.RuleScript;
-import com.osframework.appclient.services.ReferenceServices;
-import com.osframework.appclient.services.SystemServices;
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.ejb.common.*;
-import com.osframework.ejb.reference.common.IReferenceMap;
-import com.osframework.ejb.reference.common.ReferenceMapBean;
-import com.osframework.ejb.reference.common.ReferenceMapUtil;
-import com.osframework.ejb.reference.security.SecurityBean;
-import com.osframework.ejb.system.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.modellibrary.reference.group.ReferenceGroup;
-import com.osframework.modellibrary.reference.group.SystemMessageFramework;
-import com.osframework.modellibrary.reference.group.TableNameFramework;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.datalibrary.reportwriter.ReportDataAdapter;
-import com.osframework.datalibrary.system.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.modellibrary.reportwriter.*;
-import com.osrmt.modellibrary.reqmanager.*;
-import com.osrmt.appclient.services.*;
-import com.osrmt.ejb.reqmanager.*;
+import javax.ejb.EntityBean;
+import javax.ejb.EntityContext;
 
-import net.sf.jasperreports.view.*;
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.util.*;
-import net.sf.jasperreports.engine.xml.*;
-import net.sf.jasperreports.engine.design.*;
-import net.sf.jasperreports.engine.query.*;
-import net.sf.jasperreports.engine.data.*;
 import org.w3c.dom.Document;
 
-import java.io.OutputStream;
-import com.osrmt.modellibrary.reference.group.*;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SystemServices;
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.Db;
+import com.osframework.datalibrary.common.SQLResult;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.datalibrary.reportwriter.ReportDataAdapter;
+import com.osframework.ejb.common.BaseBean;
+import com.osframework.ejb.reference.common.IReferenceMap;
+import com.osframework.ejb.reference.common.ReferenceMapBean;
+import com.osframework.ejb.system.ISystem;
+import com.osframework.ejb.system.SystemUtil;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.framework.utility.FileProcess;
+import com.osframework.modellibrary.common.ServiceCall;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.group.ReferenceGroup;
+import com.osframework.modellibrary.reference.group.TableNameFramework;
+import com.osframework.modellibrary.reportwriter.ReportList;
+import com.osframework.modellibrary.reportwriter.ReportModel;
+import com.osframework.modellibrary.system.RecordFileList;
+import com.osframework.modellibrary.system.RecordFileModel;
+import com.osframework.modellibrary.system.RecordParameterControlList;
+import com.osrmt.ejb.reqmanager.IRequirementManager;
+import com.osrmt.ejb.reqmanager.RequirementManagerBean;
+import com.osrmt.modellibrary.reference.group.ArtifactLevelGroup;
+import com.osrmt.modellibrary.reference.group.ComponentTypeGroup;
+import com.osrmt.modellibrary.reqmanager.ArtifactList;
+import com.osrmt.modellibrary.reqmanager.ArtifactModel;
+
+import net.sf.jasperreports.engine.JRResultSetDataSource;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.query.JRXPathQueryExecuterFactory;
+import net.sf.jasperreports.engine.util.JRXmlUtils;
 
 public class ReportWriterBean extends BaseBean implements EntityBean, IReportWriter {
 

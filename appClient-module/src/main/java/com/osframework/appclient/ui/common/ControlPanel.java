@@ -1,29 +1,58 @@
 package com.osframework.appclient.ui.common;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.util.Enumeration;
+import java.util.GregorianCalendar;
+import java.util.Vector;
 
-import java.util.*;
-import java.text.*;
-import javax.swing.event.*;
-import javax.swing.text.*;
+import javax.swing.ComboBoxModel;
+import javax.swing.JComponent;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTabbedPane;
+import javax.swing.JTextField;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ListDataEvent;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
 
-import com.jgoodies.forms.builder.*;
-import com.jgoodies.forms.layout.*;
-
+import com.osframework.appclient.services.Application;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.components.IApplyChanges;
+import com.osframework.appclient.ui.controls.ICustomBind;
+import com.osframework.appclient.ui.controls.IGetBoolean;
+import com.osframework.appclient.ui.controls.IGetCombo;
+import com.osframework.appclient.ui.controls.IGetDocument;
+import com.osframework.appclient.ui.controls.UILabel;
+import com.osframework.appclient.ui.controls.UIValueList;
+import com.osframework.appclient.ui.listeners.DateDocListener;
+import com.osframework.appclient.ui.listeners.DoubleDocListener;
+import com.osframework.appclient.ui.listeners.NumberDocListener;
+import com.osframework.appclient.ui.listeners.TextDocListener;
+import com.osframework.appclient.ui.listeners.UIListDataSelectionListener;
+import com.osframework.appclient.ui.listeners.UIListSelectionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.ControlScript;
+import com.osframework.framework.utility.RuleScript;
+import com.osframework.modellibrary.common.IControlModel;
+import com.osframework.modellibrary.reference.group.DatabaseDataTypeFramework;
+import com.osframework.modellibrary.reference.group.SystemMessageFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationCustomControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationUserModel;
+import com.osframework.modellibrary.system.RecordParameterValueList;
+import com.osframework.modellibrary.system.RecordParameterValueModel;
 import com.osrmt.modellibrary.reports.ReportParameterModel;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.system.*;
-import com.osframework.framework.logging.*;
-import com.osframework.framework.utility.*;
 
 
 public class ControlPanel {

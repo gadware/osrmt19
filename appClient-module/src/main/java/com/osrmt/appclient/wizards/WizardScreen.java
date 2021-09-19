@@ -1,23 +1,21 @@
 package com.osrmt.appclient.wizards;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.HeadlessException;
+import java.awt.Point;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JPanel;
 
-import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.jgoodies.forms.factories.Borders;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.listeners.*;
-import com.osframework.framework.logging.Debug;
-import com.osframework.modellibrary.common.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.system.*;
+import com.osframework.appclient.ui.components.PanelButtonWizard;
+import com.osframework.appclient.ui.controls.UIJDialog;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.listeners.UIActionListener;
 
 
 /**

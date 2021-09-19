@@ -1,7 +1,8 @@
 package com.osframework.appclient.ui.controls;
 
-import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.JTree;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreeNode;
 
 public class UIJTree extends JTree {
 	

@@ -1,37 +1,57 @@
 package com.osrmt.appclient.system;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import javax.swing.*;
-import javax.swing.event.*;
+import javax.swing.DefaultListModel;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ListModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ListSelectionEvent;
 
-import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.jgoodies.forms.factories.Borders;
-import com.osframework.appclient.services.*;
-import com.osframework.appclient.ui.common.*;
-import com.osframework.appclient.ui.components.*;
-import com.osframework.appclient.ui.controls.*;
-import com.osframework.framework.logging.Debug;
-import com.osframework.framework.utility.TimedAction;
-import com.osframework.modellibrary.reference.common.*;
-import com.osframework.modellibrary.reference.group.*;
-import com.osframework.modellibrary.reference.security.*;
-import com.osframework.modellibrary.system.RecordFileModel;
-
-import javax.swing.*;
-import javax.swing.border.Border;
-
-
-import com.osframework.appclient.ui.controls.UIJFrame;
-import com.osframework.appclient.ui.listeners.DoubleClickListener;
+import com.osframework.appclient.services.ReferenceServices;
+import com.osframework.appclient.services.SecurityServices;
+import com.osframework.appclient.ui.common.ControlPanel;
+import com.osframework.appclient.ui.common.GUI;
+import com.osframework.appclient.ui.components.PanelAddRemove;
+import com.osframework.appclient.ui.components.PanelOkCancel;
+import com.osframework.appclient.ui.components.UICenterSouthDialog;
+import com.osframework.appclient.ui.components.UIInputBox;
+import com.osframework.appclient.ui.components.UIItem;
+import com.osframework.appclient.ui.components.UIList;
+import com.osframework.appclient.ui.components.UIPanelButton;
+import com.osframework.appclient.ui.components.UIStandardDialog;
+import com.osframework.appclient.ui.components.UIStandardPanel;
+import com.osframework.appclient.ui.controls.UIJPanel;
+import com.osframework.appclient.ui.controls.UIProperties;
+import com.osframework.appclient.ui.controls.UITabbedPane;
 import com.osframework.appclient.ui.listeners.UIActionListener;
 import com.osframework.appclient.ui.listeners.UIListSelectionListener;
+import com.osframework.framework.logging.Debug;
+import com.osframework.framework.utility.TimedAction;
+import com.osframework.modellibrary.reference.common.ReferenceDisplay;
+import com.osframework.modellibrary.reference.common.ReferenceDisplayList;
+import com.osframework.modellibrary.reference.common.ReferenceModel;
+import com.osframework.modellibrary.reference.group.ApplicationFramework;
+import com.osframework.modellibrary.reference.group.FormButtonTextFramework;
+import com.osframework.modellibrary.reference.group.ReferenceGroup;
+import com.osframework.modellibrary.reference.group.SystemMessageFramework;
+import com.osframework.modellibrary.reference.group.ViewFramework;
+import com.osframework.modellibrary.reference.security.ApplicationControlList;
+import com.osframework.modellibrary.reference.security.ApplicationControlModel;
+import com.osframework.modellibrary.reference.security.ApplicationViewList;
+import com.osframework.modellibrary.reference.security.ApplicationViewModel;
 import com.osrmt.modellibrary.reference.group.ApplicationGroup;
 import com.osrmt.modellibrary.reference.group.ControlTypeGroup;
-import com.osrmt.modellibrary.reference.group.ControlsGroup;
 
 public class UISystemForm extends UIJPanel {
 	

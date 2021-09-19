@@ -22,28 +22,27 @@
 package com.osrmt.ejb.issue;
 
 import java.rmi.RemoteException;
-import java.util.*;
-import javax.ejb.*;
-import com.osframework.framework.logging.*;
-import com.osframework.datalibrary.common.*;
-import com.osframework.modellibrary.common.*;
-import com.osframework.ejb.common.*;
+import java.util.Enumeration;
+
+import javax.ejb.EntityBean;
+import javax.ejb.EntityContext;
+
+import com.osframework.datalibrary.common.DataAccessException;
+import com.osframework.datalibrary.common.DbConnection;
+import com.osframework.datalibrary.common.UpdateResult;
+import com.osframework.ejb.common.BaseBean;
+import com.osframework.ejb.common.BeanTransaction;
 import com.osframework.ejb.reference.common.IReferenceMap;
 import com.osframework.ejb.reference.common.ReferenceMapBean;
-import com.osframework.ejb.reference.common.ReferenceMapUtil;
-import com.osframework.ejb.system.SystemUtil;
-import com.osframework.modellibrary.reference.common.*;
+import com.osframework.framework.logging.Debug;
+import com.osframework.modellibrary.common.ServiceCall;
 import com.osframework.modellibrary.reference.group.RecordTypeFramework;
-import com.osframework.modellibrary.reference.security.*;
 import com.osrmt.appclient.common.ApplicationObject;
-import com.osrmt.datalibrary.issue.*;
-import com.osrmt.datalibrary.reqmanager.RequirementTreeDataAdapter;
-import com.osrmt.ejb.reqmanager.RequirementManagerBean;
-import com.osrmt.modellibrary.issue.*;
+import com.osrmt.datalibrary.issue.IssueDataAdapter;
+import com.osrmt.modellibrary.issue.IssueCriteria;
+import com.osrmt.modellibrary.issue.IssueList;
+import com.osrmt.modellibrary.issue.IssueModel;
 import com.osrmt.modellibrary.reference.group.IssueTypeGroup;
-import com.osrmt.modellibrary.reference.group.TableNameGroup;
-import com.osrmt.modellibrary.reqmanager.ArtifactHistoryModel;
-import com.osrmt.modellibrary.reqmanager.ArtifactModel;
 
 
 

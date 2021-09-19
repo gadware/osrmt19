@@ -1,7 +1,7 @@
 //************ AUTO GENERATED DO NOT EDIT *********//
 package com.osframework.modellibrary.reference.common;
 
-import com.osframework.modellibrary.common.IControlModel;;
+;
 
 public class ReferenceModel extends ReferenceDataModel implements Comparable {
 

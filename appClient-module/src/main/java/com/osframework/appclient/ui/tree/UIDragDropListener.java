@@ -1,13 +1,14 @@
 package com.osframework.appclient.ui.tree;
 
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.dnd.*;
+import java.awt.Point;
+import java.awt.dnd.DragSource;
+import java.awt.dnd.DropTargetDragEvent;
+import java.awt.dnd.DropTargetDropEvent;
+import java.awt.dnd.DropTargetEvent;
+import java.awt.dnd.DropTargetListener;
 
-import javax.swing.*;
-import javax.swing.tree.*;
+import javax.swing.tree.TreePath;
 
-import com.osframework.appclient.services.ReferenceServices;
 import com.osframework.framework.logging.Debug;
 
 public abstract class UIDragDropListener implements DropTargetListener {

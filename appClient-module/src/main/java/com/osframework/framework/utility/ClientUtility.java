@@ -3,10 +3,13 @@
  */
 package com.osframework.framework.utility;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
-import com.osframework.framework.logging.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Properties;
+
+import com.osframework.framework.logging.Debug;
 
 public class ClientUtility {
 	
