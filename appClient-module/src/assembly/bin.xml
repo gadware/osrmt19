@@ -10,16 +10,10 @@
 		<fileSet>
 			<directory>${output.bin}</directory>
 			<outputDirectory>./</outputDirectory>
-			<includes>
-		      <include>**.*</include>
-		    </includes>
 		</fileSet>
 		<fileSet>
-		    <directory>${basedir}/build-resources/reports</directory>
+		    <directory>${basedir}/../build-resources/reports</directory>
 		    <outputDirectory>reports</outputDirectory>
-			<includes>
-		      <include>**.*</include>
-		    </includes>
   		</fileSet>
 	</fileSets>
 </assembly>
