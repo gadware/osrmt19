@@ -9,11 +9,11 @@
 	<fileSets>
 		<fileSet>
 			<directory>${output.bin}</directory>
-			<outputDirectory>./</outputDirectory>
+			<outputDirectory>./osrmt.desktop</outputDirectory>
 		</fileSet>
 		<fileSet>
 		    <directory>${basedir}/../build-resources/reports</directory>
-		    <outputDirectory>reports</outputDirectory>
+		    <outputDirectory>osrmt.desktop/reports</outputDirectory>
   		</fileSet>
 	</fileSets>
 </assembly>
